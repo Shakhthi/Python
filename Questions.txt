@@ -1,0 +1,60 @@
+PYTHON INTERVIEW QUESTIONS
+
+1.What does immutable mean and what three types of Python core data types are considered immutable?
+    
+
+2.What does mapping mean and what kind of data type is based on mapping?
+   
+
+3.What is the type conversion in python?
+   
+
+4.What are the types of type conversion?
+
+
+5.What are logic operators? why we use use them?
+
+
+6.Can you eloborate about operator precedence?
+
+
+7.What is diffence between "in" and "is" in python?
+
+
+8.What is imporatance of Boolean values?
+
+
+9.Do condition statements have it's own scope?
+
+
+10.When will be else clause is executed?
+
+
+11.What if conditional clauses didn't have conditions?
+
+
+12.What is "pass" in python?
+
+
+13.Diffence between while loop and for loop?
+
+
+14.What are advantages of for loop over while loop?
+
+
+15.what is difference between "continue" and "break"?
+
+
+16.How to break a nested loop?
+
+
+17.State the usage of nonlocal keyword?
+
+
+18.Can we pass a function as an argument? if yes, Explain
+
+
+19.How to decorate a function?
+
+
+20.How to return multiple values from function?
