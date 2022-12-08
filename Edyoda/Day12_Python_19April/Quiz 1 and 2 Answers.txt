@@ -1,0 +1,178 @@
+Q2-
+1.
+What will be output for 100/25 expression?
+print(100/25) 
+2.And, Or and Not all are examples of?Logical Operators
+3.Select the mutable datatype from below options-dict
+4.Which operator can be used to compare two values?-==
+5.What will be the output of this statement:
+
+print("p" in "Python")
+-False
+6.Which of the following is not a valid python operator?-==
+7.#What is the output of the following code:
+
+print(9//2)
+-4
+8.What will be the output of following Python Code?
+
+Code-
+
+
+9.What will be the output of the following Python code snippet?
+
+not(3>4)
+
+not(1&1)
+
+-
+True
+False
+10.Which of the following is a valid python statement?-c
+
+Q1
+1.Which of the following are immutable?
+String
+Correct Option
+Tuple
+Correct Option
+2.Which of the following are True?
+tuples are immutable
+Correct Option
+dict keys are immutable
+Correct Option
+set keys are immutable
+Correct Option
+dict keys are unique
+Correct Option
+
+3.Can I add elements into a list present inside a tuple?
+
+Yes
+
+4.What data types are eligible for becoming keys in dict?
+
+tuples
+Correct Option
+list
+float
+Correct Option
+set
+
+5.Where is indexing NOT possible?
+
+list
+set
+Correct Option
+dict
+Correct Option
+string
+6.What will be the output of the following code:
+
+a = (1,2,3)
+
+b = (1,2,3)
+
+print(id(a) == id(b))
+
+7.
+What will be the output of the following code?
+
+a = (1,2,3)
+
+b = (1,2,3)
+
+print(id(a[0]) == id(b[0]))
+
+8.
+Which of the Following is False?
+
+Dict Keys are Unique
+Set Keys are Immutable
+Tuple inside a list can be edited
+Correct Option
+List inside a tuple can be edited
+
+9.Type Casting/Data Type Conversion is Possible in both direction from list to tuple and from tuple to list.
+
+True
+Correct Option
+False
+
+
+Assignment-1
+
+Q1
+
+x,y=0,1
+print(x)
+while y<50:
+
+    print(y)
+    x,y = y,x+y
+
+
+Q2
+# Python code to reverse a string
+# using loop
+
+def reverse(s):
+str = ""
+for i in s:
+	str = i + str
+return str
+
+s = "Geeksforgeeks"
+
+for i range(
+
+print ("The original string is : ",end="")
+print (s)
+
+print ("The reversed string(using loops) is : ",end="")
+print (reverse(s))
+
+s = "Geeksforgeeks"
+a=""
+for i in range(len(s)-1,-1,-1):
+
+    a=a+s[i]
+
+print(a)
+
+
+Q3
+
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) # Declaring the tuple
+count_odd = 0
+count_even = 0
+for x in numbers:
+        if not x % 2:
+    	     count_even+=1
+        else:
+    	     count_odd+=1
+print("Number of even numbers :",count_even)
+print("Number of odd numbers :",count_odd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

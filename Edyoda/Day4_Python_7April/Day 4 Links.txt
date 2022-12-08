@@ -1,0 +1,9 @@
+Variable Assignment-https://pythonnumericalmethods.berkeley.edu/notebooks/chapter02.01-Variables-and-Assignment.html#:~:text=The%20assignment%20operator%2C%20denoted%20by,be%20stored%20into%20this%20variable.
+
+Memory Allocation-https://www.geeksforgeeks.org/garbage-collection-python/
+
+https://www.geeksforgeeks.org/memory-management-in-python/
+
+Operators-https://www.geeksforgeeks.org/python-operators/
+
+Immutability-https://www.pythontutorial.net/advanced-python/python-mutable-and-immutable/

@@ -1,0 +1,374 @@
+Quiz 9
+
+1.re.purge()
+2.In Regex, [a-n] stands for?
+
+Returns a match for any digit between 0 and 9
+Returns a match for any lower case character, alphabetically between a and n-Correct Option
+Returns a match for any two-digit numbers from 00 and 59
+Returns a match for any character EXCEPT a, r, and n
+
+3.Which character stand for Zero or more occurrences in regex?
+
+@
+#
+|
+*-Correct Option
+
+4.
+Which character stand for Starts with in regex?
+
+&
+$
+^-Correct Option
+#
+
+5.
+
+Which function returns a list containing all matches?
+
+search
+findall-Correct Option
+split
+find
+
+6.
+
+Python has a built-in package called?
+
+re-Correct Option
+regex
+reg
+rgx
+
+7.
+
+________ are wildcard characters in regular expression.
+
+# and @
+* and ?--Correct Option
+/ and .
+% and $
+
+8.
+Which of the following matches end of the string?
+
+@
+^
+?
+$--Correct Option
+
+
+9.None
+
+10.
+Which of the following creates a pattern object?
+
+re.create(str)
+re.regex(str)
+re.compile(str)--Correct Option
+re.assemble(str)
+
+# Module Regular Expression is imported
+# using __import__().
+import re
+
+# compile() creates regular expression
+# character class [a-e],
+# which is equivalent to [abcde].
+# class [abcde] will match with string with
+# 'a', 'b', 'c', 'd', 'e'.
+p = re.compile('[a-e]')
+
+# findall() searches for the Regular Expression
+# and return a list upon finding
+print(p.findall("Aye, said Mr. Gibenson Stark"))
+
+
+
+
+11.
+
+What will be the output of the following Python code?
+
+sentence = 'we are humans'
+matched = re.match(r'(.*) (.*?) (.*)', sentence)
+print(matched.groups())
+
+(‘we’, ‘are’, ‘humans’)--Correct Option
+(we, are, humans)
+(‘we’, ‘humans’)
+‘we are humans’
+
+
+Quiz-10
+
+
+1.
+odd=lambda x:bool(x%2)
+numbers=[n for n in range(10)=0 to 9]
+print(numbers)
+n=list()
+for i in numbers:
+   if odd(i):
+       continue
+   else:
+       break
+
+
+2.
+
+fun=lambda y:bool(y%2)
+
+print(fun(25), fun(31))
+
+
+3.
+https://www.geeksforgeeks.org/functools-module-in-python/
+
+import functools
+
+l=[1,2,4,5]
+
+print(functools.reduce(lambda x,y:x*y,l))
+
+
+4.
+l=[1,-2,-7,4,10]
+
+def f1(x):
+    return x<2
+
+a=filter(f1,l)
+print(list(a))
+
+
+
+5.
+l=[-2,4]
+m=map(lambda x:x*2,l)
+print(list(m))
+print(m)
+
+Iterable---list,string,tuple
+anything which can be iterated upon
+
+
+6.
+
+l=[1,-2,-4,4,6]
+
+def f1(x):
+    return x<-1
+
+a=map(f1,l)
+print(list(a))
+
+
+7.
+
+https://www.geeksforgeeks.org/python-bitwise-operators/
+
+[3,2,1,0,7]
+
+
+# Python program to show
+# bitwise operators
+
+a = 10
+b = 4
+
+# Print bitwise AND operation
+print("a & b =", a & b)
+
+# Print bitwise OR operation
+print("a | b =", a | b)
+
+# Print bitwise NOT operation
+print("~a =", ~a)
+
+# print bitwise XOR operation
+print("a ^ b =", a ^ b)
+
+
+
+# Python program to show
+# shift operators
+
+a = 10
+b = -10
+
+# print bitwise right shift operator
+print("a >> 1 =", a >> 1)
+print("b >> 1 =", b >> 1)
+
+a = 5
+b = -10
+
+# print bitwise left shift operator
+print("a << 1 =", a << 1)
+print("b << 1 =", b << 1)
+
+
+8.
+
+l=["bay","cat","boy","fan"]
+
+print(list(filter(lambda word:word.startswith("b"),l)))
+
+     
+
+9.
+print([x**2 for x in range(10)])
+
+print(list(map(lambda x:x**2,range(10))))
+True
+
+10.
+l=[3,2,5,4,5]
+m=map(lambda x:x**3,l)
+print(list(m))
+
+
+Assignment 5
+
+
+class powof:
+    def power(self, x, n):
+        if x==0 or x==1 or n==1:
+            return x 
+
+        if x==-1:--
+            if n%2 ==0:
+                return 1
+            else:
+                return -1
+        if n==0:
+            return 1
+        if n<0:
+            return 1/self.power(x,-n)
+
+        val = x**n
+
+        return val
+
+x=int(input("x:"))
+n=int(input("n:"))
+print(powof().power(x,n))
+
+
+
+2^-8===1/2^8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class py_pow:
+    def power(self, x, n):
+        if x==0 or x==1 or n==1:
+            return x 
+
+        if x==-1:
+            if n%2 ==0:
+                return 1
+            else:
+                return -1
+        if n==0:
+            return 1
+        if n<0:
+            return 1/self.power(x,-n)
+
+        val = self.power(x,n//2)
+        
+        if n%2 ==0:
+            return val*val
+        return val*val*x
+
+x=int(input("x:"))
+n=int(input("n:"))
+print(py_pow().power(x,n))
+print(pow(5,3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.Quiz Discussion
+2.Assignment Discussion
+3.Testing in Python
+4.CSv File Writing
+5.Json File Writing
+6.
+7.
+8.
+9.
+
+
+
+
+
+
+
+
+
+

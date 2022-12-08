@@ -1,0 +1,78 @@
+1.Open function
+
+# a file named "geek", will be opened with the reading mode.
+file = open('Python.txt', 'r')
+# This will print every line one by one in the file
+for each in file:
+	print (each)
+
+
+2.
+Read
+# Python code to illustrate read() mode
+file = open("file.txt", "r")
+print (file.read())
+Another way to read a file is to call a certain number of characters like in the following code the interpreter will read the first five characters of stored data and return it as a string: 
+
+# Python code to illustrate read() mode character wise
+file = open("file.txt", "r")
+print (file.read(5))
+
+3.
+Creating a file using write() mode
+Let’s see how to create a file and how write mode works: 
+To manipulate the file, write the following in your Python environment: 
+
+# Python code to create a file
+file = open('geek.txt','w')
+file.write("This is the write command")
+file.write("It allows us to write in a particular file")
+file.close()
+The close() command terminates all the resources in use and frees the system of this particular program. 
+ 
+
+Working of append() mode
+Let’s see how the append mode works: 
+
+# Python code to illustrate append() mode
+file = open('geek.txt','a')
+file.write("This will add this line")
+file.close()
+4.
+
+It is designed to provide much cleaner syntax and exception handling when you are working with code. That explains why it’s good practice to use them with a statement where applicable. This is helpful because using this method any files opened will be closed automatically after one is done, so auto-cleanup. 
+Example: 
+
+# Python code to illustrate with()
+with open("file.txt") as file: 
+    data = file.read()
+# do something with data
+
+5.
+Using write along with the with() function
+We can also use the write function along with the  with() function: 
+
+# Python code to illustrate with() alongwith write()
+with open("file.txt", "w") as f:
+    f.write("Hello World!!!")
+6.
+
+split() using file handling
+We can also split lines using file handling in Python. This splits the variable when space is encountered. You can also split using any characters as we wish. Here is the code:
+
+# Python code to illustrate split() function
+with open("file.text", "r") as file:
+    data = file.readlines()
+    for line in data:
+        word = line.split()
+        print (word)
+7.
+
+https://www.geeksforgeeks.org/open-a-file-in-python/
+
+https://www.geeksforgeeks.org/how-to-read-from-a-file-in-python/
+https://www.geeksforgeeks.org/writing-to-file-in-python/
+https://www.geeksforgeeks.org/python-append-to-a-file/
+https://www.geeksforgeeks.org/file-handling-python/
+https://www.geeksforgeeks.org/reading-writing-text-files-python/
+

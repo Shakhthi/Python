@@ -1,0 +1,26 @@
+Jupiter Notebook-
+https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
+https://www.geeksforgeeks.org/getting-started-with-jupyter-notebook-python/
+https://www.dataquest.io/blog/jupyter-notebook-tutorial/
+
+pip install jupyter
+jupyter nitebook
+run the codes
+codes gets autosaved
+
+Datatype
+https://www.programiz.com/python-programming/variables-datatypes
+https://www.geeksforgeeks.org/python-data-types/
+
+Range
+https://www.programiz.com/python-programming/methods/built-in/range
+https://www.geeksforgeeks.org/python-range-function/
+
+Input
+https://www.geeksforgeeks.org/taking-input-in-python/
+https://www.programiz.com/python-programming/methods/built-in/input
+
+
+Comments-
+https://www.programiz.com/python-programming/comments
+

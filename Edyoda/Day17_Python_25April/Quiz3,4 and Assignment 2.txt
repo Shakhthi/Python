@@ -1,0 +1,189 @@
+Quiz3
+
+1.
+print(ord('foo'))
+Error
+2.
+s = 'foo'
+t = 'bar'
+print('barf' in 2 * (s + t))
+True
+3.print('p' + 'q' if '12'.isdigit() else 'r' + 's')
+pq
+4.True
+    print('hello'=="hello")
+
+5.i=1
+while True:
+    if i%3==0
+        break
+    print(i)
+    i+=1
+Error
+6.s3 = s1+s2
+7.print(chr(ord('b')+1))
+8.x='abcd'
+for i in range(len(x)):
+    x='a'
+    print(x)
+a
+a
+a
+a
+
+9.
+for i in range(0):
+    print(i)
+
+No Output
+
+10.print('ab,cd,ef,cd,gh.cd'.split(','))
+
+['ab', 'cd', 'ef', 'cd', 'gh.cd']
+
+Quiz 4 
+
+1.Which Statements are True:
+
+a) Tuples are immutable.
+
+b) We can modify a list even if it is present inside a tuple.
+
+c) Strings are mutable.
+
+d) Sets can contain mutable elements.
+
+a and b
+
+2.
+l1 = [1,3,5,7,9]
+l2 = [2,4,6,8,10]
+index = 0
+for i in range(1,11,2):
+    l1.insert(i, l2[index])
+    index += 1
+print(l1)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Range-1,3,5,7,9
+
+l1---[1,3,5,7,9]
+when my i=1,index=0
+l1.insert(1,l2[0])--[1,2,3,5,7,9],index=1
+
+when my i=3,index=1
+l1.insert(3,l2[1])--[1,2,3,4,5,7,9],index=2
+
+when my i=5,index=2
+l1.insert(5,l2[2])--[1,2,3,4,5,6,7,9],index=2
+..
+
+atlast
+
+[1,2,3,4,5,6,7,8,9,10]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.a, b, c = (1, 2, 3, 4, 5, 6, 7, 8, 9)[1::3]
+
+print(a,b,c)
+2,5,8
+4.Which Python code is correct to create a tuple with a single element, the string 'foo', and assign it to a variable called t.
+
+t = ('foo',)
+
+5.Done
+6.a) del a[2]
+
+b) a.remove(3)
+
+c) a[2:3] = []
+7.
+l1 = [[1,2,3],[4,5,6]]
+l2 = []
+for list1 in l1:
+    l2.extend(list1)
+print(l2)
+
+[1,2,3,4,5,6]
+8.
+a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+
+print(a[4::-2])
+['quux', 'baz', 'foo']
+9.print(['a', 'b', 'c'] == ['c', 'a', 'b'])
+False
+
+10.Done
+
+Assignment 2
+
+1.
+a=[(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+
+d={}
+
+for i in a:
+    d[i[1]]=i
+
+print(d)
+
+sd=sorted(d.keys())
+print(sd)
+a=[]
+for i in sorted(d.keys()):
+    print(i,d[i], end=" ")
+
+    print("jj")
+    a.append(d[i])
+print(a)
+2.
+# Create the dictionary
+my_dict = {}
+
+# Now populate it
+for i in range(97, 97 + 26):
+    # Map character to ascii value
+    my_dict[chr(i)] = i
+
+# Print the populated dictionary
+print(my_dict)
+
+my_dict = {chr(i): i for i in range(97, 97 + 26)}
+print(my_dict)
+
+
+import string
+
+print(string.ascii_lowercase)
+print(string.ascii_letters)
+print(string.ascii_uppercase)
+print(string.ascii_lowercase)
+print(string.digits)
+print(string.hexdigits)
+print(string.octdigits)
+print(string.punctuation)
+print(string.printable)
+a={}
+for i in string.ascii_lowercase:
+    a[i]=ord(i)
+
+print(a)
+
+
+

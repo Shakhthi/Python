@@ -1,0 +1,440 @@
+1.https://www.geeksforgeeks.org/working-csv-files-python/
+
+
+# importing csv module
+import csv
+
+# csv file name
+filename = "aapl.csv"
+
+# initializing the titles and rows list
+fields = []
+rows = []
+
+# reading csv file
+with open(filename, 'r') as csvfile:
+	# creating a csv reader object
+	csvreader = csv.reader(csvfile)
+	
+	# extracting field names through first row
+	fields = next(csvreader)
+
+	# extracting each data row one by one
+	for row in csvreader:
+		rows.append(row)
+
+	# get total number of rows
+	print("Total no. of rows: %d"%(csvreader.line_num))
+
+# printing the field names
+print('Field names are:' + ', '.join(field for field in fields))
+
+# printing first 5 rows
+print('\nFirst 5 rows are:\n')
+for row in rows[:5]:
+	# parsing each column of a row
+	for col in row:
+		print("%10s"%col,end=" "),
+	print('\n')
+
+# importing the csv module
+import csv
+
+# field names
+fields = ['Name', 'Branch', 'Year', 'CGPA']
+
+# data rows of csv file
+rows = [ ['Nikhil', 'COE', '2', '9.0'],
+		['Sanchit', 'COE', '2', '9.1'],
+		['Aditya', 'IT', '2', '9.3'],
+		['Sagar', 'SE', '1', '9.5'],
+		['Prateek', 'MCE', '3', '7.8'],
+		['Sahil', 'EP', '2', '9.1']]
+
+# name of csv file
+filename = "university_records.csv"
+
+# writing to csv file
+with open(filename, 'w') as csvfile:
+	# creating a csv writer object
+	csvwriter = csv.writer(csvfile)
+	
+	# writing the fields
+	csvwriter.writerow(fields)
+	
+	# writing the data rows
+	csvwriter.writerows(rows)
+
+
+# importing the csv module
+import csv
+
+# my data rows as dictionary objects
+mydict =[{'branch': 'COE', 'cgpa': '9.0', 'name': 'Nikhil', 'year': '2'},
+		{'branch': 'COE', 'cgpa': '9.1', 'name': 'Sanchit', 'year': '2'},
+		{'branch': 'IT', 'cgpa': '9.3', 'name': 'Aditya', 'year': '2'},
+		{'branch': 'SE', 'cgpa': '9.5', 'name': 'Sagar', 'year': '1'},
+		{'branch': 'MCE', 'cgpa': '7.8', 'name': 'Prateek', 'year': '3'},
+		{'branch': 'EP', 'cgpa': '9.1', 'name': 'Sahil', 'year': '2'}]
+
+# field names
+fields = ['name', 'branch', 'year', 'cgpa']
+
+# name of csv file
+filename = "university_records.csv"
+
+# writing to csv file
+with open(filename, 'w') as csvfile:
+	# creating a csv dict writer object
+	writer = csv.DictWriter(csvfile, fieldnames = fields)
+	
+	# writing headers (field names)
+	writer.writeheader()
+	
+	# writing data rows
+	writer.writerows(mydict)
+
+
+2.Doctest
+
+https://www.geeksforgeeks.org/testing-in-python-using-doctest-module/
+
+3.Unittest
+
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 26 18:10:33 2020
+
+@author: SAGAR
+"""
+
+
+import unittest
+
+class SimpleTest(unittest.TestCase):
+   def test1(self):
+      self.assertEqual(4 + 5,9)
+   def test2(self):
+      self.assertNotEqual(5 * 2,10)
+   def test3(self):
+      self.assertTrue(4 + 5 == 9,"The result is False")
+   def test4(self):
+      self.assertTrue(4 + 5 == 10,"assertion fails")
+   def test5(self):
+      self.assertIn(3,[1,2,3])
+   def test6(self):
+      self.assertNotIn(3, range(5))
+
+if __name__ == '__main__':
+   unittest.main()
+
+"""   
+
+"""
+
+
+
+import unittest
+
+class SimpleTest(unittest.TestCase):
+   def test1(self):
+      self.assertListEqual([2,3,4], [1,2,3,4,5])
+   def test2(self):
+      self.assertTupleEqual((1*2,2*2,3*2), (2,4,6))
+   def test3(self):
+      self.assertDictEqual({1:11,2:22},{3:33,2:22,1:11})
+
+if __name__ == '__main__':
+   unittest.main()
+
+
+# Python code to demonstrate working of unittest
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+	
+	def setUp(self):
+		pass
+
+	# Returns True if the string contains 4 a.
+	def test_strings_a(self):
+		self.assertEqual( 'a'*4, 'aaaa')
+
+	# Returns True if the string is in upper case.
+	def test_upper(self):		
+		self.assertEqual('foo'.upper(), 'FOO')
+
+	# Returns TRUE if the string is in uppercase
+	# else returns False.
+	def test_isupper(self):		
+		self.assertTrue('FOO'.isupper())
+		self.assertFalse('Foo'.isupper())
+
+	# Returns true if the string is stripped and
+	# matches the given output.
+	def test_strip(self):		
+		s = 'geeksforgeeks'
+		self.assertEqual(s.strip('geek'), 'sforgeeks')
+
+	# Returns true if the string splits and matches
+	# the given output.
+	def test_split(self):		
+		s = 'hello world'
+		self.assertEqual(s.split(), ['hello', 'world'])
+		with self.assertRaises(TypeError):
+			s.split(2)
+
+if __name__ == '__main__':
+	unittest.main()
+
+
+https://www.geeksforgeeks.org/unit-testing-python-unittest/
+
+4.
+https://www.analyticsvidhya.com/blog/2021/08/explore-the-magic-methods-in-python/
+
+5.Iterator and Generator
+
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr 18 21:28:33 2020
+
+@author: SAGAR
+"""
+
+
+# A simple Python program to demonstrate 
+# working of iterators using an example type 
+
+class nft:
+
+   def __init__(self,limit):#start&stopping point
+       
+      self.x = 0
+      self.limit=limit
+
+   def __next__(self):
+   
+        # Store current value ofx 
+        x = self.x 
+  
+        # Stop iteration if limit is reached 
+        if x >= self.limit: #helps you to stop
+            raise StopIteration 
+ 
+       # Else increment and return old value 
+        
+        self.x =self.x+ 1 #step
+        return self.x*2       
+    
+   def __iter__(self):
+       
+      return self
+
+
+#s = Seq(6)
+
+
+for e in Seq(6):
+
+   print(e)
+   
+
+
+"""
+
+"""
+# Sample built-in iterators 
+
+# Iterating over a list 
+print("List Iteration") 
+l = ["geeks", "for", "geeks"] 
+for i in l: 
+	print(i) 
+	
+# Iterating over a tuple (immutable) 
+print("\nTuple Iteration") 
+t = ("geeks", "for", "geeks") 
+for i in t: 
+	print(i) 
+	
+# Iterating over a String 
+print("\nString Iteration")	 
+s = "Geeks"
+for i in s : 
+	print(i) 
+
+"""
+
+"""
+
+# A generator function that yields 1 for first time, 
+# 2 second time and 3 third time 
+def simpleGeneratorFun(): 
+	yield 1			
+	yield 2			
+	yield 3			
+
+# Driver code to check above generator function 
+for value in simpleGeneratorFun(): 
+	print(value) 
+
+
+# A simple generator for Fibonacci Numbers 
+def fib(limit): 
+	
+	# Initialize first two Fibonacci Numbers 
+	a, b = 0, 1
+
+	# One by one yield next Fibonacci Number 
+	while a < limit: 
+		yield a 
+		a, b = b, a + b 
+
+limit-6
+a=0,b=1
+yield-0
+a=1,b=1
+yield=1
+a=1,b=2
+.......
+
+
+# Create a generator object 
+x = fib(5)
+
+print("printing fibonacci")
+# Iterating over the generator object using next 
+print(next(x)) # In Python 3, __next__() 
+print(next(x)) 
+print(next(x)) 
+print(next(x)) 
+print(next(x))
+#print(next(x))
+ 
+# Iterating over the generator object using for 
+# in loop. 
+
+print("\nUsing for in loop") 
+for i in fib(5): 
+	print(i) 
+
+
+
+# A Simple Python program to demonstrate working 
+# of yield 
+
+
+"""
+"""
+
+# A Python program to generate squares from 1 
+# to 100 using yield and therefore generator 
+
+# An infinite generator function that prints 
+# next square number. It starts with 1 
+def nextSquare(): 
+	i = 1; 
+
+	# An Infinite loop to generate squares 
+	while True: 
+		yield i*i				 
+		i += 1 # Next execution resumes 
+				# from this point	 
+
+# Driver code to test above generator 
+# function 
+print("nextSquareGenerator")
+for num in nextSquare(): 
+	if num > 100: 
+		break	
+	print(num) 
+
+ 
+
+
+"""
+
+#Okay, now you know what it means for an object to be iterable, and you know how to 
+#use iter() to obtain an iterator from it. Once you’ve got an iterator, what can you do with it?
+
+#An iterator is essentially a value producer that yields successive values from its associated iterable object. 
+#The built-in function next() is used to obtain the next value from in iterator.
+
+"""
+a = ['foo', 'bar', 'baz']
+
+itr = iter(a)
+print(type(itr))
+
+
+print(next(itr))
+print(next(itr))
+
+print(next(itr))
+
+#In this example, a is an iterable list and itr is the associated iterator, obtained with iter(). 
+#Each next(itr) call obtains the next value from itr.
+
+#Notice how an iterator retains its state internally. It knows which values have been obtained already, so when you call next(), it knows what value to return next.
+
+
+#print(next(itr))
+
+
+#If all the values from an iterator have been returned already,
+#a subsequent next() call raises a StopIteration exception. Any further attempts to obtain values from the iterator will fail.
+
+
+
+# Function to check object 
+# is iterable or not  
+def iterable(obj): 
+    try: 
+        iter(obj) 
+        return True
+          
+    except TypeError: 
+        return False
+  
+# Driver Code      
+for element in [34, [4, 5], (4, 5), 
+             {"a":4}, "dfsdf", 4.5]: 
+                   
+    print(element, " is iterable : ", type(element),iterable(element)) 
+
+
+#from  calculation import summation
+
+#from  calculation import *
+
+
+import calculation
+
+a=9
+b=10
+#print(summation(a,b))
+
+print(calculation.summation(a,b))
+
+
+https://www.programiz.com/python-programming/generator
+
+
+Json
+
+import json
+
+with open('C:\\Users\\1698480\\Desktop\\Test.json', 'r') as f:
+  data = json.load(f)
+
+
+print(data)
+
+
+https://www.programiz.com/python-programming/json
+https://www.programiz.com/python-programming/iterator
+
+https://www.geeksforgeeks.org/read-json-file-using-python/#:~:text=The%20full%2Dform%20of%20JSON,json%20package%20in%20Python%20script.
+
+

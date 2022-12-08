@@ -1,0 +1,112 @@
+What is Python-https://www.python.org/doc/essays/blurb/
+https://opensource.com/resources/python
+https://www.geeksforgeeks.org/the-evolution-of-programming-languages/
+https://www.geeksforgeeks.org/python-language-introduction/
+https://www.geeksforgeeks.org/python-features/
+https://www.geeksforgeeks.org/history-of-python/
+
+
+Why Python-https://techvidvan.com/tutorials/python-advantages-and-disadvantages/
+https://medium.com/@mindfiresolutions.usa/python-7-important-reasons-why-you-should-use-python-5801a98a0d0b
+https://www.analyticsinsight.net/10-reasons-why-python-is-one-of-the-best-programming-languages
+Why is Python Dynamically Typed-https://www.geeksforgeeks.org/why-python-is-called-dynamically-typed/
+How to install Python-https://realpython.com/installing-python/
+
+Use Cases to Study-https://www.dataquest.io/blog/real-world-python-use-cases/
+
+Data science
+https://towardsdatascience.com/top-10-reasons-why-you-need-to-learn-python-as-a-data-scientist-e3d26539ec00
+https://generalassemb.ly/blog/how-is-python-used-in-data-science/
+https://www.analyticsvidhya.com/blog/2020/11/top-13-python-libraries-every-data-science-aspirant-must-know-and-their-resources/#h2_4
+
+
+Web Scraping
+https://www.edureka.co/blog/web-scraping-with-python/#legal
+GUI
+https://towardsdatascience.com/5-python-gui-frameworks-to-create-desktop-web-and-even-mobile-apps-c25f1bcfb561
+Image Processing
+https://analyticsindiamag.com/top-8-image-processing-libraries-in-python/
+Game
+https://analyticsindiamag.com/top-9-python-frameworks-for-game-development/
+web framework
+https://www.educative.io/blog/web-development-in-python#frameworks
+
+
+Dynamically Typed
+
+a=False
+if(a):
+    print("Sagar"+"Sarkar")
+else:
+    print("Sagar"+3)
+
+
+Ways to execute a pytohn file
+
+1.To know the version of Python --python -V
+2.To run python in interactive mode---python 
+after that you can start run your code line by line(Press enter to get to the next line)--exit() to exit the interactive mode.
+
+
+print('Hello World !')
+
+a = 1
+b = 3
+if a > b:
+	print("a is Greater")
+else:
+	print("b is Greater")
+
+3.Execute a python file in Command line.--Navigate to the location of your python file.
+and execute command- python run.py
+4.IDLE-As shown in Demo
+5.In IDE-As shown in Screenshots
+
+https://www.geeksforgeeks.org/how-to-run-a-python-script/
+
+Execution of Python Program--https://www.geeksforgeeks.org/internal-working-of-python/
+https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/
+
+
+1.Run a normal Python file as stated above.
+2.Generate a python compiled file in desktop using a command---python -m py_compile file.py
+3.Go to __pycache__ folder in desktop and check for the compiled file
+
+Python Installation-
+How to install Python-https://realpython.com/installing-python/
+Linux OS-https://intellipaat.com/blog/tutorial/python-tutorial/how-to-download-and-install-python/#_Python_Installation_on_linux
+Ubuntu OS-https://intellipaat.com/blog/tutorial/python-tutorial/how-to-download-and-install-python/#_Python_Installation_on_Ubuntu
+Mac OS-https://intellipaat.com/blog/tutorial/python-tutorial/how-to-download-and-install-python/#_Python_on_Mac
+Windows-
+https://www.jetbrains.com/help/pycharm/installation-guide.html#standalone
+https://www.tutorialspoint.com/pycharm/pycharm_installation.htm 
+
+
+print
+
+
+https://www.programiz.com/python-programming/methods/built-in/print
+https://www.geeksforgeeks.org/python-output-using-print-function/
+Flush-https://stackoverflow.com/questions/10019456/usage-of-sys-stdout-flush-method
+
+
+
+FLush Example
+from time import sleep
+
+# output is not flushed here
+print("Hello, world!", end='')
+sleep(5)
+print("Bye!!!")
+
+
+
+
+# output is flushed here
+print("Hello, world!", end='', flush= True)
+sleep(5)
+print("Bye!!!")
+
+
+Examples
+https://www.programiz.com/python-programming/examples

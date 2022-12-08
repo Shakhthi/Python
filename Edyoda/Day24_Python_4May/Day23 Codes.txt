@@ -1,0 +1,282 @@
+1.# Python program to demonstrate
+# lambda functions
+
+
+string ='GeeksforGeeks'
+
+# lambda returns a function object
+print(lambda string : string)
+
+2.
+# Python code to illustrate cube of a number
+# showing difference between def() and lambda().
+def cube(y):
+	return y*y*y
+
+lambda_cube = lambda y: y*y*y
+
+# using the normally
+# defined function
+print(cube(5))
+
+# using the lambda function
+print(lambda_cube(5))
+
+
+3.
+tables = [lambda x=x: x*10 for x in range(1, 11)]
+
+for table in tables:
+	print(table())
+
+4.
+# Example of lambda function using if-else
+Max = lambda a, b : a if(a > b) else b
+
+print(Max(1, 2))
+
+
+l=lambda x:x**2
+s=lambda x:print("3")
+
+# Example of lambda function using if-else
+Max = lambda a, b : l(2) if(a > b) else s(2)
+
+print(Max(1, 2))
+
+5.
+# Python code to illustrate
+# filter() with lambda()
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(filter(lambda x: (x%2 != 0) , li))
+print(final_list)
+
+6.
+# Python 3 code to people above 18 yrs
+ages = [13, 90, 17, 59, 21, 60, 5]
+
+adults = list(filter(lambda age: age>18, ages))
+
+print(adults)
+
+7.
+
+# Python code to illustrate
+# map() with lambda()
+# to get double of a list.
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(map(lambda x: x*2, li))
+print(final_list)
+
+
+8.
+
+# Python program to demonstrate
+# use of lambda() function
+# with map() function
+animals = ['dog', 'cat', 'parrot', 'rabbit']
+
+# here we intend to change all animal names
+# to upper case and return the same
+uppered_animals = list(map(lambda animal: str.upper(animal), animals))
+
+print(uppered_animals)
+
+
+9.
+# function that filters vowels
+def fun(variable):
+	letters = ['a', 'e', 'i', 'o', 'u']
+	if (variable in letters):
+		return True
+	else:
+		return False
+
+
+# sequence
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+
+# using filter function
+filtered = filter(fun, sequence)
+
+print('The filtered letters are:')
+for s in filtered:
+	print(s)
+
+
+10.
+
+# a list contains both even and odd numbers.
+seq = [0, 1, 2, 3, 5, 8, 13]
+
+# result contains odd numbers of the list
+result = filter(lambda x: x % 2 != 0, seq)
+print(list(result))
+
+# result contains even numbers of the list
+result = filter(lambda x: x % 2 == 0, seq)
+print(list(result))
+
+
+11.
+
+# Python program to demonstrate working
+# of map.
+
+# Return double of n
+def addition(n):
+	return n + n
+
+# We double all numbers using map()
+numbers = (1, 2, 3, 4)
+result = map(addition, numbers)
+print(list(result))
+
+
+12.
+# Double all numbers using map and lambda
+
+numbers = (1, 2, 3, 4)
+result = map(lambda x: x + x, numbers)
+print(list(result))
+
+
+13.
+
+# Add two lists using map and lambda
+
+numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+
+result = map(lambda x, y: x + y, numbers1, numbers2)
+print(list(result))
+
+14.
+# List of strings
+l = ['sat', 'bat', 'cat', 'mat']
+
+# map() can listify the list of strings individually
+test = list(map(list, l))
+print(test)
+
+
+
+
+
+
+15.
+
+# Empty list
+List = []
+
+# Traditional approach of iterating
+for character in 'Geeks 4 Geeks!':
+	List.append(character)
+
+# Display list
+print(List)
+
+
+16.
+
+# Using list comprehension to iterate through loop
+List = [character for character in 'Geeks 4 Geeks!']
+
+# Displaying list
+print(List)
+
+
+
+17.
+matrix = []
+
+for i in range(3):
+	
+	# Append an empty sublist inside the list
+	matrix.append([])
+	
+	for j in range(5):
+		matrix[i].append(j)
+		
+print(matrix)
+
+
+18.
+# using lambda to print table of 10
+numbers = []
+
+for i in range(1, 6):
+	numbers.append(i*10)
+
+print(numbers)
+
+numbers= [i*10 for i in range(1,6)]
+
+print(numbers)
+
+# using lambda to print table of 10
+numbers = list(map(lambda i: i*10, [i for i in range(1,6)]))
+
+print(numbers)
+
+
+19.
+
+# Getting square of even numbers from 1 to 10
+squares = [n**2 for n in range(1, 11) if n%2==0]
+
+# Display square of even numbers
+print(squares)
+
+
+
+
+20.
+# Reverse each string in tuple
+List = [string[::-1] for string in ('Geeks', 'for', 'Geeks')]
+
+# Display list
+print(List)
+
+
+
+21.
+# Python code to demonstrate dictionary
+# comprehension
+
+# Lists to represent keys and values
+keys = ['a','b','c','d','e']
+values = [1,2,3,4,5]
+
+# but this line shows dict comprehension here
+myDict = { k:v for (k,v) in zip(keys, values)}
+print(zip(keys,values))
+# We can use below too
+print(dict(zip(keys,values)))
+
+
+print (myDict)
+
+22.
+# Python code to demonstrate dictionary
+# creation using list comprehension
+myDict = {x: x**2 for x in [1,2,3,4,5]}
+print (myDict)
+
+
+23.
+sDict = {x.upper(): x*3 for x in 'coding '}
+print (sDict)
+
+
+24.
+# Python code to demonstrate dictionary
+# comprehension using if.
+newdict = {x: x**3 for x in range(10) if x**3 % 4 == 0}
+print(newdict)
+
+newdict = { x**3 for x in range(10) if x**3 % 4 == 0}
+print(newdict)
+print(type(newdict))

@@ -1,0 +1,649 @@
+OOPS
+Classes-Template/Blueprint of objects 
+Objects-is created on the basis of 
+objects
+-anythng ahving properties,behaviour and
+ID
+properties,attributes,variables as well
+behaviour,methods or functions
+Class-Vehicle
+attr-wheels,fuel,seater,name
+behaviours--consumption of fuel
+commuting, transportation
+objects-sample objects auto,car,truck,bus,bike
+
+
+
+Variables---instance and class
+instance--sep copy for sep objects
+class-single copy for sep objects--saving of 
+space/memory
+
+Ano, Name, Gender and Place--Instance
+A1,A2,A3-- are 3 instances
+org="UIDAI"--class variable
+
+A1=Aadhar(103,"S",F,Kolkata)
+A2=Aadhar(123,"Sagar",M,Noida)
+A3=Aadhar(113,"Suraj",M,Delhi)
+
+
+default--does not take any para
+already present if no Para const
+
+parametrized--it takes para(min1)
+if para is present then have to
+create def  construc seperately
+
+
+self--points to the current instance
+
+
+attributes,methods and constructors
+
+
+Single Inheritence
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)
+
+after inheritence
+
+B-x,y,printx(self),printy(self),z,printz(self)
+
+Syntax----class B(A):
+
+Multiple Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B--z,printz(self)-2
+
+
+Class C(A,B)--p,printp(self)-8
+==C(2)+A(4)+B(2)==8
+
+
+Multilevel Inheritence
+
+
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)-2
+
+Class C(B)--p,printp(self)
+
+
+Hirarchical Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B(A)--z,printz(self)-6
+
+Class C(A)--p,printp(self)-6
+
+#Polymorphism and Method Overriding---comes from Multiple Inheritence
+
+
+#Method Overriding 
+
+#when you try to redefine a method with same name but diff implementation
+
+
+
+
+
+
+1.Concrete classes- have methods with implementation
+2.Abstract classes -only have methods without implementation(abstract method)
+--cannot have any func definition(use pass)
+
+abstract method
+cannot have any func definition
+uses @abstract decorator
+Abstract class can never have an object instance
+
+Method Overriding
+can have func definition
+does not uses any decorator
+class can  have an object instance
+ 
+
+exa of cc
+
+
+Class A:
+ def __init__(self):
+    print("A")
+ def  d(self):
+  print("display")
+
+
+ d is an abstract method which is implemented in Class B
+
+import abc 
+Class A(abc):
+  @abstractmethod
+  def d(self):
+    pass
+
+Class B(A):
+  def d(self):
+    print("this is B")
+
+Class C(A):
+  def d(self):
+    print("this is C")
+
+
+Class A():
+  def d(self):
+    print("This is A")
+
+Class B(A):
+  def d(self):
+    print("this is B")
+
+Class C(A):
+  def d(self):
+    print("this is C")
+
+
+
+decorators--@
+
+A-which adds ttwo numbers
+you can decorate that func by adding any functionality
+
+A-which adds ttwo numbers---I wantto round it off
+If I want any modification in a func
+-- change the original function---
+--extending the func using decorators
+
+def A(x,y):
+ return x+y
+
+-- change the original function---
+
+
+def A(x,y):
+ return round(x+y)
+
+
+--extending the func using decorators
+
+@decorators
+def A(x,y):
+ return x+y
+
+decorators--many types-----one of them is abstract
+
+
+MRO-Method resolution Order---MULTIPLE Inheritence
+
+
+class A:
+class A():
+class A(object):
+
+class A():
+ pass
+class B(A):
+ pass
+class C(A):
+ pass
+class D(B,C):
+ pass
+e=D()
+e.u()
+mro(A)--A->Object
+mro(B)--B->A->Object
+mro(C)--C->A->Object
+mro(D)--D->B->C->A->Object
+
+Class A():
+ pass
+class B():
+ pass
+class C():
+ pass
+class X(A,B):
+ pass
+class Y(B,C):
+ pass
+class P(X,Y,C):
+ pass
+mro(A)--A-O
+mro(X)--X-A-B-O
+mro(Y)--Y-B-C-O
+mro(P)--P X Y C B A O
+class '__main__.P'>, 
+<class '__main__.X'>, 
+<class '__main__.A'>, 
+<class '__main__.Y'>, 
+<class '__main__.B'>, 
+<class '__main__.C'>, 
+<class 'object'>]
+
+
+C3 Algorithm
+
+mro(P)=P+merge(mro(X)+mro(Y)+mro(C)+XYC)
+      =P+merge(XABO+YBCO+CO+XYC)
+      =P+X+merge(ABO+YBCO+CO+YC)
+      =P+X+A+merge(BO+YBCO+CO+YC)
+      =P+X+A+Y+merge(BO+BCO+CO+C) 
+      =P+X+A+Y+B+merge(O+CO+CO+C)
+      =P+X+A+Y+B+C+merge(O+O+O)
+      =P+X+A+Y+B+C+O  
+
+
+ABCDEF
+head element-A
+Tail elements-BCDEF
+
+
+mro(A)=A+merge(mro(B)+mro(C)+BC)
+=A+merge(BDEO+CDFO+BC)
+=A+B+merge(DEO+CDFO+C)
+=A+B+C+merge(DEO+DFO)
+=A+B+C+D+merge(EO+FO)
+=ABCDE+merge(O+FO)
+=ABCDEFO
+
+
+
+3 Access Specifier in Python
+1.Public--do not have any symbol for itself 
+Can be inherited or accessed outside
+ex- age=0 
+ def printNumber(self):
+   pass
+2.Private-- double underscore for itself
+__age=0 
+ def __printNumber(self):
+   pass  
+Cannot be inherited or displayed outside the class directly(using dot)
+3.Protected-- single underscore for itself(in case of inheritence)
+_age=0 
+ def _printNumber(self):
+   pass  
+Can be inherited only but Cannot displayed outside the class directly
+
+Class B(A):
+ 
+
+Exception
+
+whichever line exception error occurs 
+it does not proceed after that line(terminates the program)
+
+
+how to handle it---try except, else and finally
+
+do not want sudden termination
+
+try-----problematic code--that throws error
+except--- if error happens then except will be executed to handle the
+error and stop unnecessary termination
+else-- if error does not happen then this will be executed
+Finally- it will be executed regardless of error happening
+optional
+
+try --except or finally
+
+try excpt
+try finally
+try except else
+
+try except else finally
+
+
+except else XXXXXX
+
+default exception type is 'Exception'-Parent exception class
+all these exception are child exception class
+
+'Exception'--every types of exceptionare caught
+
+
+class method makes use of class to create a new way of creating objects
+that is two diff ways of creating objects--belongs to class and can 
+change the data of a class
+
+
+Static method- belongs to class but works on the outside only and 
+cannot change the data and can only access it
+
+
+
+
+
+range(a,b,c)
+range(1,5)---1,2,3,4
+
+only want till 3 
+
+range is a kind of iterator
+for i in range(1,5):
+   if(x==3):
+ 
+    print(x)
+    break
+   else:
+    print(x)
+
+123 but I have already written till 4---1234(range)
+
+print the multi of 2 till 10th term
+
+
+for i in range(1,11):--1,2......10
+  print(2*i)
+
+custom iterator--possible let me name it nft
+for i in nft(10):
+  print(i)
+
+2
+4
+6
+8
+10
+...20
+
+Iterable and iterator
+
+Iterable-any thing which returns a member at a time
+ex--list,string,tuple,dictionary
+
+Iterator-- you will get this iterator object when you 
+call iter() built in func on itreable
+
+ex nft
+
+for i in nft("SAGAR"):--4,5,6
+   print(i)
+
+SS
+AA
+GG
+AA
+RR
+
+
+--How to create it !!!!!'
+
+in order to create an iterator use class template
+
+
+for element in list/tuple/string:
+    # do something with element
+Is actually implemented as.
+--next and iter--always used
+# create an iterator object from that iterable
+1.iter_obj = iter(iterable)--list/tuple/string
+
+# infinite loop
+2.while True:
+    try:
+        # get the next item
+        element = next(iter_obj)
+        # do something with element
+    except StopIteration:
+        # if StopIteration is raised, break from loop
+        break
+l=[3,4,5,6]
+
+first while iteration--3 4 5 6 
+for element in list:
+    # do something with element
+    3,4,5,6 
+
+always have two steps--next and iter
+
+1. call iter on the iterable--create an iterator object
+2. call next on itertor object to get the element
+3.if reached element -- thorow exception to break out of while loop
+
+Every iterator has these points (builtin/custom)
+1.starting point---ex3 --Yes
+2.My steps --Yes  
+3.Stopping point--yes-when get error--yes
+
+
+Generator --like Iterator only but  some difference......
+
+
+for i in Seq(6):
+
+ if(i==4):
+  print(i)
+  break
+ else:  
+  print(i)
+
+2,4,6,8
+
+Iterator made use of class--!!!!!!!!!
+If I tell u no need to use if else , u can do it directly---using generator
+
+U make use of Functions!!!!!!!!!!!  but with a twist 
+we use return statement !!!!!! but this time we will use yield keyword for
+generator
+
+
+a func with yield instead of return===Generator
+
+def x(y):
+ return(x*x)
+ print("Hello")# XXXXXXXXXXXXXXXX
+
+print(x(8))
+
+64
+or 
+64
+Hello
+
+
+diff between return and yield
+#return never comes back into the func,executed only once
+#yield pauses the func call and comes back,execution more than once is allowed
+
+
+Fibancci Series
+0,1,1,2,3,5,8,13
+
+Ques!!!!--Can I generate fibanacci series numbers as per my desired call using 
+iterator
+
+I want till 2th term--generate till 8th ???-yes  iterator has there own start
+ing and ending point ????????
+
+It can be possible usng generator
+
+If I want till 3rd term====Possible
+If I want till 65th term====Possible
+...................
+
+
+Magic/Dunder methods
+Dunder---Double Underscore methods
+mostly used in Operator Overloading??????????
+
+3+4==7
+"T"+"S"=="TS"
+[3,4]+[7,8]=[3,4,7,8]
+list concetanation
+
+....how ?????????
+Operator Overloading in Python
+-extending the func of '+' operator
+
+
+we use dunder methods..various types
+
+
+1.__add__-
+
+
+class One:
+    def __init__(self, a):
+        self.a = a
+    def __add__(self, object2):
+        return self.a + object2.a
+class Two:
+    def __init__(self, a):
+        self.a = a
+    def __add__(self, object2):
+        return self.a + object2.a
+a_instance = One(10)
+b_instance = Two(20)
+print(a_instance + b_instance)#
+#normally add int,string,list
+#but used add magic method to add two instances value
+# Output: 30
+
+
+
+class A:
+    def __init__(self, item):
+        self.item = item
+    def __getitem__(self, index):
+        return self.item[index]
+a = A([1, 2, 3])
+print("First item:" ,a[0])
+print(f"Second item: {a[1]}")
+print(f"Third item: {a[2]}")
+# Output: 
+# First item: 1
+# Second item: 2
+# Third item: 3
+
+
+l=[1,2,3]
+
+l[0]=====1
+.... But what if it is a class ????
+
+a=A([1,2,3]) here list is a parameter to 
+A class constructor
+A[0]==1 ??? XXXXXXXXXXX
+
+__getitem and setitem constructor
+
+Suppose you want to change the compo of a list
+
+how ????? setitem
+
+class SetItemExample:
+    def __init__(self, item):
+        self.item = item
+    def __setitem__(self, index, item1):
+        self.item[index] = item1
+setitem_instance = SetItemExample([1, 2, 3])
+print(f"Items before setting: {setitem_instance.item}")
+setitem_instance[1] = 5
+setitem_instance[3] = 9 XXXX
+
+print(f"Items after setting: {setitem_instance.item}")
+# Output
+# Items before setting: [1, 2, 3]
+# Items after setting: [1, 5, 3]
+
+
+
+class ReprExample:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    def __repr__(self):
+        return f"ReprExample(a={self.a}, b={self.b}, c={self.c})"
+repr_instance = ReprExample(1, 2, 3)
+print(repr_instance)
+# Output
+# ReprExample(a=1, b=2, c=3)
+
+object=A(1,2,3)
+
+a=1
+b=2
+c=3
+
+print(object.a) !!!!!!
+print(object.b)
+print(object.c)
+how to do them in shortcut..
+using repr dunder method!!!!
+
+
+All dunder methods are builtin Functions
+__repr__
+__add__
+
+
+length
+
+l=[4,5]
+len(l)==2
+
+but not in case of instance attributes
+
+a=A([1,2,3])
+????len
+
+using __len__
+
+
+class LenExample:
+    def __init__(self, item):
+        self.item = item
+    def __len__(self):
+        return len(self.item)
+len_instance = LenExample([1, 2, 3])
+b=LenExample((1,2,3,4))
+print(len(b))##4
+
+c=LenExample(3)
+print(len(c))##3 is an integer value
+
+#len works with tuple.string and list !!!!
+print(len(len_instance))
+# Output: 3
+
+
+
+relational opretor--- to compare the instance attributes
+
+
+class Comparison:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, object2):
+        return self.a < object2.a
+    def __gt__(self, object2):
+        return self.a > object2.a
+    def __le__(self, object2):
+        return self.a <= object2.a
+    def __ge__(self, object2):
+        return self.a >= object2.a
+    def __eq__(self, object2):
+        return self.a == object2.a
+    def __ne__(self, object2):
+        return self.a != object2.a
+a = Comparison(1)
+b = Comparison(2)
+print(
+    a < b,
+    a > b,
+    a <= b,
+    a >= b,
+    a == b,
+    a != b
+)
+# Output
+# True False True False False True
