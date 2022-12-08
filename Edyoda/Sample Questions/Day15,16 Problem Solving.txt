@@ -1,0 +1,454 @@
+1.
+Check If Two String Arrays are Equivalent-Given two string arrays word1 and word2, 
+return true if the two arrays represent the same string,and false otherwise.
+A string is represented by an array if the array elements 
+concatenated in order forms the string.
+
+Example 1:
+
+Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+Output: true
+Explanation:
+word1 represents string "ab" + "c" -> "abc"
+word2 represents string "a" + "bc" -> "abc"
+The strings are the same, so return true.
+Example 2:
+
+Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
+Output: false
+Example 3:
+
+Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
+Output: true
+
+2.
+Counting Words With a Given Prefix-You are given an array of 
+strings words and a string pref.
+
+Return the number of strings in words that contain pref as a prefix.
+
+A prefix of a string s is any leading contiguous substring of s.
+
+Example 1:
+
+Input: words = ["pay","attention","practice","attend"], pref = "at"
+Output: 2
+Explanation: The 2 strings that contain "at" as a prefix are: "attention" and "attend".
+Example 2:
+
+Input: words = ["leetcode","win","loops","success"], pref = "code"
+Output: 0
+Explanation: There are no strings that contain "code" as a prefix.
+
+3.
+Intersection of Two Arrays-Given two integer arrays nums1 and nums2, return an array of their 
+intersection. Each element in the result must be unique and you may return the result in any order.
+
+Example 1:
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Example 2:
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted.
+
+4.Truncate Sentence
+
+A sentence is a list of words that are separated by a single space with no leading or 
+trailing spaces. Each of the words consists of only uppercase and lowercase English letters 
+(no punctuation).
+
+For example, "Hello World", "HELLO", and "hello world hello world" are all sentences.
+You are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only 
+the first k​​​​​​ words. Return s​​​​​​ after truncating it.
+
+
+Example 1:
+
+Input: s = "Hello how are you Contestant", k = 4
+Output: "Hello how are you"
+Explanation:
+The words in s are ["Hello", "how" "are", "you", "Contestant"].
+The first 4 words are ["Hello", "how", "are", "you"].
+Hence, you should return "Hello how are you".
+Example 2:
+
+Input: s = "What is the solution to this problem", k = 4
+Output: "What is the solution"
+Explanation:
+The words in s are ["What", "is" "the", "solution", "to", "this", "problem"].
+The first 4 words are ["What", "is", "the", "solution"].
+Hence, you should return "What is the solution".
+Example 3:
+
+Input: s = "chopper is not a tanuki", k = 5
+Output: "chopper is not a tanuki"
+
+5.Sum of Unique Elements-You are given an integer array nums.
+The unique elements of an array are the elements that 
+appear exactly once in the array.
+
+Return the sum of all the unique elements of nums.
+
+
+Example 1:
+
+Input: nums = [1,2,3,2]
+Output: 4
+Explanation: The unique elements are [1,3], and the sum is 4.
+Example 2:
+
+Input: nums = [1,1,1,1,1]
+Output: 0
+Explanation: There are no unique elements, and the sum is 0.
+Example 3:
+
+Input: nums = [1,2,3,4,5]
+Output: 15
+Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
+
+6.
+Length of Last Word-
+Given a string s consisting of some words separated by some number of spaces, 
+return the length of the last word in the string.
+
+A word is a maximal substring consisting of non-space characters only.
+
+
+Example 1:
+
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+Example 2:
+
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+Example 3:
+
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
+
+7.
+Find the Difference of Two Arrays
+
+Given two 0-indexed integer arrays nums1 and nums2, return a list answer 
+of size 2 where:
+
+answer[0] is a list of all distinct integers in nums1 which are not present 
+in nums2.
+answer[1] is a list of all distinct integers in nums2 which are not present 
+in nums1.
+Note that the integers in the lists may be returned in any order.
+
+
+Example 1:
+
+Input: nums1 = [1,2,3], nums2 = [2,4,6]
+Output: [[1,3],[4,6]]
+Explanation:
+For nums1, nums1[1] = 2 is present at index 0 of nums2, whereas nums1[0] = 1 and nums1[2] = 3 are not present in nums2. Therefore, answer[0] = [1,3].
+For nums2, nums2[0] = 2 is present at index 1 of nums1, whereas nums2[1] = 4 and nums2[2] = 6 are not present in nums2. Therefore, answer[1] = [4,6].
+Example 2:
+
+Input: nums1 = [1,2,3,3], nums2 = [1,1,2,2]
+Output: [[3],[]]
+Explanation:
+For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], their value is only included once and answer[0] = [3].
+Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
+
+
+8.
+Count Number of Pairs With Absolute Difference K
+
+Given an integer array nums and an integer k, return the number of pairs (i, j) 
+where i < j..j=i+1 such that |nums[i] - nums[j]| == k.
+
+The value of |x| is defined as:
+
+x if x >= 0.
+-x if x < 0.
+ 
+Example 1:
+
+Input: nums = [1,2,2,1], k = 1
+Output: 4
+Explanation: The pairs with an absolute difference of 1 are:
+
+Example 2:
+
+Input: nums = [1,3], k = 3
+Output: 0
+Explanation: There are no pairs with an absolute difference of 3.
+Example 3:
+
+Input: nums = [3,2,1,5,4], k = 2
+Output: 3
+Explanation: The pairs with an absolute difference of 2 are:
+
+
+
+9.Count Good Triplets
+
+Given an array of integers arr, and three integers a, b and 
+c. You need to find the number of good triplets.
+
+A triplet (arr[i], arr[j], arr[k]) is good if the following 
+conditions are true:
+
+0 <= i < j < k < arr.length
+|arr[i] - arr[j]| <= a
+|arr[j] - arr[k]| <= b
+|arr[i] - arr[k]| <= c
+Where |x| denotes the absolute value of x.
+
+Return the number of good triplets. 
+
+Example 1:
+
+Input: arr = [3,0,1,1,9,7], a = 7, b = 2, c = 3
+Output: 4
+Explanation: There are 4 good triplets: [(3,0,1), (3,0,1), (3,1,1), (0,1,1)].
+Example 2:
+
+Input: arr = [1,1,2,2,3], a = 0, b = 0, c = 1
+Output: 0
+Explanation: No triplet satisfies all conditions.
+
+
+10.
+Find Greatest Common Divisor of Array-Given an 
+integer array nums, return the greatest common 
+divisor of the smallest number and largest number 
+in nums.
+
+The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers.
+
+ 
+
+Example 1:
+
+Input: nums = [2,5,6,9,10]
+Output: 2
+Explanation:
+The smallest number in nums is 2.
+The largest number in nums is 10.
+The greatest common divisor of 2 and 10 is 2.
+Example 2:
+
+Input: nums = [7,5,6,8,3]
+Output: 1
+Explanation:
+The smallest number in nums is 3.
+The largest number in nums is 8.
+The greatest common divisor of 3 and 8 is 1.
+Example 3:
+
+Input: nums = [3,3]
+Output: 3
+Explanation:
+The smallest number in nums is 3.
+The largest number in nums is 3.
+The greatest common divisor of 3 and 3 is 3.
+
+small = min(nums)
+		large = max(nums)
+        for i in range(small, 0, -1):
+            if small % i == 0 and large % i == 0:
+                return i
+11.
+Check if the Sentence Is Pangram
+A pangram is a sentence where every letter of the English alphabet 
+appears at least once.
+
+Given a string sentence containing only lowercase English letters, 
+return true if sentence is a pangram, or false otherwise.
+
+ 
+a--ascii-97
+z--ascii-122
+Example 1:
+
+Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+Output: true
+Explanation: sentence contains at least one of every letter of the English alphabet.
+Example 2:
+
+Input: sentence = "leetcode"
+Output: false
+ 
+
+
+
+
+12.
+Reverse Prefix of Word
+
+Given a 0-indexed string word and a character ch, 
+reverse the segment of word that 
+starts at index 0 and ends at the index of the 
+first occurrence of ch (inclusive). 
+If the character ch does not exist in word, 
+do nothing.
+
+For example, if word = "abcdefd" and ch = "d", then you 
+should reverse the segment 
+that starts at 0 and ends at 3 (inclusive). 
+The resulting string will be "dcbaefd".
+Return the resulting string.
+
+
+Example 1:
+
+Input: word = "abcdefd", ch = "d"
+Output: "dcbaefd"
+Explanation: The first occurrence of "d" is at index 3. 
+Reverse the part of word from 0 to 3 (inclusive), the resulting string is "dcbaefd".
+Example 2:
+
+Input: word = "xyxzxe", ch = "z"
+Output: "zxyxxe"
+Explanation: The first and only occurrence of "z" is at index 3.
+Reverse the part of word from 0 to 3 (inclusive), the resulting string is "zxyxxe".
+Example 3:
+
+Input: word = "abcd", ch = "z"
+Output: "abcd"
+Explanation: "z" does not exist in word.
+You should not do any reverse operation, the resulting string is "abcd".
+
+class Solution:
+    def reversePrefix(self, word: str, ch: str) -> str:
+        idx=word.find(ch)    
+        if idx:
+            return word[:idx+1][::-1]+ word[idx+1:]
+        return word
+13.Maximum Number of Words You Can Type
+
+There is a malfunctioning keyboard where some letter keys 
+do not work. All other keys on the keyboard work properly.
+
+Given a string text of words separated by a single space 
+(no leading or trailing spaces) and a string brokenLetters of 
+all distinct letter keys that are broken, return the number of 
+words in text you can fully type using this keyboard.
+Example 1:
+Input: text = "hello world", brokenLetters = "ad"
+Output: 1
+Explanation: We cannot type "world" because the 'd' key is broken.
+Example 2:
+
+Input: text = "leet code", brokenLetters = "lt"
+Output: 1
+Explanation: We cannot type "leet" because the 'l' and 't' keys are broken.
+Example 3:
+
+Input: text = "leet code", brokenLetters = "e"
+Output: 0
+Explanation: We cannot type either word because the 'e' key is broken.
+
+    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
+        
+        def fun(s: Set) -> int:
+            return 0 if set(brokenLetters).intersection(s) else 1
+        
+        word_sets = map(set, text.split())
+        return sum((map(fun, word_sets))) 
+
+
+14.Check if Numbers Are Ascending in a Sentence
+
+A sentence is a list of tokens separated by a single space with 
+no leading or trailing spaces. Every token is either a positive 
+number consisting of digits 0-9 with no leading zeros, or a word 
+consisting of lowercase English letters.
+
+For example, "a puppy has 2 eyes 4 legs" is a sentence with seven 
+tokens: "2" and "4" are numbers and the other tokens such as "puppy" 
+are words.
+Given a string s representing a sentence, you need to check if all 
+the numbers in s are strictly increasing from left to right (i.e., 
+other than the last number, each number is strictly smaller than the 
+number on its right in s).
+
+Return true if so, or false otherwise.
+
+Example 1:
+
+example-1
+Input: s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
+Output: true
+Explanation: The numbers in s are: 1, 3, 4, 6, 12.
+They are strictly increasing from left to right: 1 < 3 < 4 < 6 < 12.
+Example 2:
+
+Input: s = "hello world 5 x 5"
+Output: false
+Explanation: The numbers in s are: 5, 5. They are not strictly increasing.
+Example 3:
+
+example-3
+Input: s = "sunset is at 7 51 pm overnight lows will be in the 
+low 50 and 60 s"
+Output: false
+Explanation: The numbers in s are: 7, 51, 50, 60. They are not strictly increasing.
+15.
+Kth Distinct String in an Array
+
+A distinct string is a string that is present only once in an array.
+
+Given an array of strings arr, and an integer k, return the kth distinct string 
+present in arr. If there are fewer than k distinct strings, return an empty string "".
+
+Note that the strings are considered in the order in which they appear in the array.
+
+
+Example 1:
+
+Input: arr = ["d","b","c","b","c","a"], k = 2
+Output: "a"
+Explanation:
+The only distinct strings in arr are "d" and "a".
+"d" appears 1st, so it is the 1st distinct string.
+"a" appears 2nd, so it is the 2nd distinct string.
+Since k == 2, "a" is returned. 
+Example 2:
+
+Input: arr = ["aaa","aa","a"], k = 1
+Output: "aaa"
+Explanation:
+All strings in arr are distinct, so the 1st string "aaa" is returned.
+Example 3:
+
+Input: arr = ["a","b","a"], k = 3
+Output: ""
+Explanation:
+The only distinct string is "b". Since there are fewer than 3 distinct strings, we return an empty string "".
+16.Rotate String
+
+Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+
+A shift on s consists of moving the leftmost character of s to the rightmost position.
+
+For example, if s = "abcde", then it will be "bcdea" after one shift.
+ 
+
+Example 1:
+
+Input: s = "abcde", goal = "cdeab"
+Output: true
+Example 2:
+
+Input: s = "abcde", goal = "abced"
+Output: false
+
+for i in range (len(s)):
+	s = s[1:]+s[:1]
+	if(s==goal):
+		return True
+return False
+

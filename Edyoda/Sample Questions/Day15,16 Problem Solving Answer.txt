@@ -1,0 +1,192 @@
+1.
+word1 = []
+word2 = []
+
+if("".join(word1)=="".join(word2)):
+    print("True")
+
+2.
+words = ["pay","attention","practice","attend"]
+
+pref = "at"
+count=0
+for i in words:
+    if(i.startswith(pref)):
+        count=count+1
+print(count)
+
+3.
+nums1 = [1,2,2,1]
+
+nums2 = [2,2]
+
+ans=list(set(nums1).intersection(set(nums2)))
+print(ans)
+
+4.s = "What is the solution to this problem"
+k = 4
+
+l=s.split(" ")
+
+print(list(l[:k]))
+
+5.
+nums = [1,2,3,2]
+a=[]
+for i in nums:
+
+    if(nums.count(i)==1):
+        a.append(i)
+
+print(sum(a))
+
+
+6.
+s = "luffy is still joyboy"
+a = s.split(" ")
+w = []
+for i in a:
+    if (i != ""):
+        w.append(i)
+print(len(w[-1]))
+
+7.
+nums1 = [1,2,3,3]
+nums2 = [1,1,2,2]
+
+a=[]
+
+a.append(list(set(nums1)-set(nums2)))
+a.append(list(set(nums2)-set(nums1)))
+
+print(a)
+8.
+num =  [3,2,1,5,4]
+k = 2
+count=0
+for i in range(len(num)):
+    for j in range(i+1,len(num)):
+
+        if(abs(num[i]-num[j])==k):
+            count=count+1
+
+print(count)
+9.
+count = 0
+        
+        # iterate over i, j, k such that  0 <= i < j < k < arr.length
+        for i in range(len(arr)):
+            for j in range(i + 1, len(arr)):
+                for k in range(j + 1, len(arr)):
+                    # here we are starting with i/j+1  becasue of the i < j < k < condition
+                    # check the other conditions
+                    if abs(arr[i] - arr[j]) <= a and abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
+                        count += 1
+        
+        
+        # return the count 
+        return count
+
+10.
+def findGCD(self, nums: List[int]) -> int:
+		small = min(nums)
+		large = max(nums)
+        for i in range(small, 0, -1):
+            if small % i == 0 and large % i == 0:
+                return i
+11.
+sentence = "leetcode"
+
+if(len(set(sentence))==26):
+    print("Pangram")
+
+sentence = "thequickbrownfoxjumpsoverthelazydog"
+count=0
+for i in set(sentence):
+
+    if(ord(i.lower())>=97 and  ord(i.lower())<=122):
+        print(ord(i))
+        count=count+1
+
+if(count==26):
+    print("yes")
+
+
+12.word = "abcd"
+ch = "z"
+i=word.find(ch)
+
+if(i==-1):
+    print(word)
+
+else:
+    print(word[:i+1][::-1]+word[i+1:])
+13.
+text = "leet code"
+brokenLetters = "e"
+
+wl=text.split(" ")
+count=0
+for i in wl:
+
+    if(set(i).intersection(set(brokenLetters))):
+        pass
+    else:
+        count=count+1
+
+print(count)
+14.
+s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
+a=s.split(" ")
+num=[]
+for i in a:
+    if(i.isnumeric()):
+        num.append(i)
+print(num)
+intnum=map(int,num)
+l=list(intnum)
+print()
+if(l==sorted(l)):
+    print("yes")
+
+15.
+
+arr = ["d","b","c","b","c","a"]
+k = 2
+a=[]
+for i in arr:
+    if(arr.count(i)==1):
+        a.append(i)
+print(a[k-1])
+
+
+
+16.
+# Function to rotate string left and right by d length
+
+def rotate(input,d):
+
+	# slice string in two parts for left and right
+	Lfirst = input[0 : d]
+	Lsecond = input[d :]
+	Rfirst = input[0 : len(input)-d]
+	Rsecond = input[len(input)-d : ]
+
+	# now concatenate two parts together
+	print ("Left Rotation : ", (Lsecond + Lfirst) )
+	print ("Right Rotation : ", (Rsecond + Rfirst))
+
+# Driver program
+if __name__ == "__main__":
+	input = 'GeeksforGeeks'
+	d=2
+	rotate(input,d)
+
+s = "abcde"
+goal = "cdeab"
+for i in range (len(s)):
+ t = s[i:]+s[:i]
+ if(t==goal):
+  print("True",i)
+
+

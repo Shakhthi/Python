@@ -1,0 +1,74 @@
+1.Intro- 9may
+2.Init -9may
+3.Self -9may
+4.class and instance variables-9may
+6.Constructors-10 May
+7.Inheritence-10 May
+8.Polymorphism-10 May
+9.Method Overriding-10 May
+Access Specifiers-10 May
+10.ABC-11 May
+11.MRO-11 May
+12.Encapsulation11 May
+13.Static and class methods11 May
+14.Dunder and Magic Methods11 May
+15.Testing-12 may
+16.Exception Handling12 may
+17.Generators-13 May
+18.CSV,JSON and XML File Handling13 May
+19.Collection and datetime-16 May
+20.Requests and Beautiful Soup-16 May
+21.Sample Questions-17,18,19,20 may
+22.Project-17,18,19,20 may
+23.Assignment-4.5
+24.Quiz -9,10,11,12
+
+
+
+
+
+
+
+
+a{5}--exact 5 
+a{5,}-- 5 or more
+a{5,8}--min 5 and max 8
+
+
+w+>---writing and reading
+a+  appending and reading
+r+ -- writing and reading
+w
+r
+a
+
+
+42 students
+S=Data-studentID,Name,Marks,Experience(Years)
+Function-AttemptQUiz,FinishAssign,attendSession
+S2=100,"A",89,2 ,dS1
+S1=101,"B",78,1  ,ds2
+
+...S900 =900 Students--
+Data 90 x4=3600 data and 2700 Methods
+
+OOPS-Classes and Objects
+Class- Student--Template-each object follows it
+
+
+Objects -ANything that can have a property(var),
+Behaviour(Methods)
+and ID
+
+
+
+Class-
+Constructor__init__(optional)-Done
+Attributes--Optional-Done
+methods--Optional
+
+  
+
+
+
+

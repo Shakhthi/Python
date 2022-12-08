@@ -1,0 +1,92 @@
+OOPS
+Classes-Template/Blueprint of objects 
+Objects-is created on the basis of 
+objects
+-anythng ahving properties,behaviour and
+ID
+properties,attributes,variables as well
+behaviour,methods or functions
+Class-Vehicle
+attr-wheels,fuel,seater,name
+behaviours--consumption of fuel
+commuting, transportation
+objects-sample objects auto,car,truck,bus,bike
+
+
+
+Variables---instance and class
+instance--sep copy for sep objects
+class-single copy for sep objects--saving of 
+space/memory
+
+Ano, Name, Gender and Place--Instance
+A1,A2,A3-- are 3 instances
+org="UIDAI"--class variable
+
+A1=Aadhar(103,"S",F,Kolkata)
+A2=Aadhar(123,"Sagar",M,Noida)
+A3=Aadhar(113,"Suraj",M,Delhi)
+
+
+default--does not take any para
+already present if no Para const
+
+parametrized--it takes para(min1)
+if para is present then have to
+create def  construc seperately
+
+
+self--points to the current instance
+
+
+attributes,methods and constructors
+
+
+Single Inheritence
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)
+
+after inheritence
+
+B-x,y,printx(self),printy(self),z,printz(self)
+
+Syntax----class B(A):
+
+Multiple Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B--z,printz(self)-2
+
+
+Class C(A,B)--p,printp(self)-8
+==C(2)+A(4)+B(2)==8
+
+
+Multilevel Inheritence
+
+
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)-2
+
+Class C(B)--p,printp(self)
+
+
+Hirarchical Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B(A)--z,printz(self)-6
+
+Class C(A)--p,printp(self)-6
+
+#Polymorphism and Method Overriding---comes from Multiple Inheritence
+
+
+#Method Overriding 
+
+#when you try to redefine a method with same name but diff implementation

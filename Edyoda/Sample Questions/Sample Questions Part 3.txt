@@ -1,0 +1,350 @@
+1.What is the output of the following program?
+data = 50
+try:
+    data = data/0
+except ZeroDivisionError:
+    print('Cannot divide by 0 ', end = '')
+else:
+    print('Division successful ', end = '')  
+try:
+    data = data/5
+except:
+    print('Inside except block ', end = '')
+else:
+    print('ABC', end = '')
+a) Cannot divide by 0 ABC
+b) Cannot divide by 0
+c) Cannot divide by 0 Inside except block ABC
+d) Cannot divide by 0 Inside except block
+
+2.What is the output of the following program?
+data = 50
+try:
+    data = data/10
+except ZeroDivisionError:
+    print('Cannot divide by 0 ', end = '')
+finally:
+    print('ABC ', end = '')
+else:
+    print('Division successful ', end = '')
+
+a) Runtime error
+b) Cannot divide by 0 ABC
+c) ABC Division successful
+d) ABC
+
+3.What is the output of the following program?
+value = [1, 2, 3, 4]
+data = 0
+try:
+    data = value[4]
+except IndexError:
+    print('ABC', end = '')
+except:
+    print('ABCD', end = '')
+a) ABCD
+b) ABC
+c) ABC ABCD
+d) Compilation error
+
+4.What is the output of the following program?
+value = [1, 2, 3, 4]
+data = 0
+try:
+    data = value[3]
+except IndexError:
+    print('GFG IndexError  ', end = '')
+except:
+    print('GeeksforGeeks IndexError  ', end = '')
+finally:
+    print('Geeks IndexError  ', end = '')  
+data = 10
+try:
+    data = data/0
+except ZeroDivisionError:
+    print('GFG ZeroDivisionError  ', end = '')
+finally:
+    print('Geeks ZeroDivisionError  ')
+a) GFG ZeroDivisionError GFG ZeroDivisionError
+b) GFG ZeroDivisionError Geeks ZeroDivisionError
+c) Geeks IndexError GFG ZeroDivisionError Geeks ZeroDivisionError
+d) Geeks IndexError GFG ZeroDivisionError
+
+
+5.
+What is the output of the following program?
+
+
+value = [1, 2, 3, 4, 5]
+try:
+    value = value[5]/0
+except (IndexError, ZeroDivisionError):
+    print('GeeksforGeeks ', end = '')
+else:
+    print('GFG ', end = '')
+finally:
+    print('Geeks ', end = '')
+a) Compilation error
+b) Runtime error
+c) GeeksforGeeks GFG Geeks
+d) GeeksforGeeks Geeks
+
+
+
+6.Consider the following code :
+class Customer: 
+    def __init__(self,cust_id, cust_name):
+        self.__cust_id = cust_id 
+        self.__cust_name = cust_name
+        self.__bill_amount = 0.0 
+class RegularCustomer(Customer): 
+    def __init__(self,cust_id, cust_name):
+        self.__cust_id = cust_id 
+        self.__cust_name = cust_name
+        self.__bill_amount = 0.0 
+        self.__discount = 5 
+Identify the OOP principle(s) that has/have been implemented in the above code :
+a. Only Encapsulation
+b. Only Inheritance
+c. Both Encapsulation and Inheritance
+d. Only Polymorphism
+
+
+7.When iterating over an object returned from csv.reader(), what is returned 
+with each iteration?
+For example, given the following code block that assumes csv_reader is an 
+object returned from csv.reader(), what would be printed to the console with
+each iteration?
+
+for item in csv_reader:
+ print(item)
+
+The full line of the file as a string
+The column data as a list
+The row data as a list
+The individual value data that is separated by the delimiter
+
+['row1','row2'...]
+8.
+
+Output ??
+
+def myfunc(x,y, a):
+ print(x + y)
+nums = [3, 5, 2]
+myfunc(*nums)
+
+6
+8
+5
+7
+
+9.Suppose list1 is [2, 33, 222, 14, 25], What is list1[:-1]?
+
+[2, 33, 222, 14]
+Error
+25
+[25, 14, 222, 33, 2]
+
+list1[:-1]
+list1[::-1]
+10.
+class test:
+ def __init__(self):
+  self.variable = 'Old'
+  self.Change(self.variable)
+ def Change(self, var):
+  var = 'New'
+obj=test()
+print(obj.variable)
+
+Error because function change can’t be called in the 
+                                __init__ function
+‘New’ is printed
+‘Old’ is printed
+Nothing is printed
+
+
+11.
+Find the output :
+a = 8.3
+b = 2
+print(a//b)
+/- float----4.15
+//- floor---4.0 not 4---> int(4.0)==4
+a. 4.15
+b. 4
+c. 4.1
+d. 4.0
+
+
+12.
+Find the output :
+
+class A:
+ def __init__(self):
+	self.__x = 1
+class B(A):
+	def display(self):
+		print(self.__x)
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 1
+b. 0
+c. None
+d. Error
+
+13.Find the output :
+def sample(v1,v2,v3=10,v4=3,*v5):
+    v4+=2 
+    v2= v1*v4 
+    for v in v5:
+        v5 = v*v---XXXX 
+    print(v5)  
+sample(0,0,1,2,3,4,5)
+What will the value of v5 ?
+a. (1,2,3,4,5)
+b. 3
+c. Type Error
+d. (3,4,5)
+14.
+Find the output :
+class A:
+	def __init__(self,x=3):
+		self._x = x
+class B(A):
+	def __init__(self):
+		super().__init__(5)
+	def display(self):
+		print(self._x)
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 5
+b. 3
+c. Error, class member x has two values
+d. Error, protected class member can’t be accessed in a subclass
+
+15.
+Find the output :
+class A:
+	def __init__(self,x=3):
+		self._x = x
+class B(A):
+	def __init__(self):
+		super().__init__()
+	def display(self):
+		print(self._x)
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 5
+b. 3
+c. Runtime Error
+d. Error, protected class member can’t be accessed in a subclass
+
+16.
+Find the output :
+count = 1
+def doThis():
+	global count
+	for i in (1, 2, 3):
+		count += 1
+doThis()
+print (count)
+a. 4
+b. 3
+c. 2
+d. 0
+
+17.
+
+Find the output :
+class student:
+	def __init__(self):
+		self.marks = 97
+		self.__cgpa = 8.7
+	def display(self):
+		print(self.marks)
+obj=student()
+print(obj._student__cgpa)
+#New Concept to be taken care of
+
+a. The program runs fine and 8.7 is printed
+b. Error because private class members can’t be accessed
+c. Error because the proper syntax for name mangling hasn’t been implemented
+d. The program runs fine but nothing is printed
+
+18.
+Find the output :
+def procedural(val1): 
+    try: 
+        sum1=0 
+        for item in str(val1):
+            sum1+=int(item_val)
+    except TypeError:
+        print("Type error occurred")
+    finally:
+        print("Finally in function")
+    print("Function executed successfully")
+try: 
+    procedural(792)
+    print("Try handled")
+except ValueError:
+    print("Value error occurred")
+except NameError:
+    print("Name error occurred")
+finally:
+    print("Finally in main")
+a.
+Finally in function
+Value error occurred
+Finally in main
+Try handled
+
+b.
+Finally in function
+Value error occurred
+Function executed successfully
+Finally in main
+Try handled
+
+c.
+Finally in function
+Name error occurred
+Finally in main
+
+d.
+Finally in function
+Value error occurred
+Name error occurred
+Try handled
+
+
+
+
+
+Answers
+
+1.a.
+2.a
+3.b
+4.c
+5.d
+6.b
+7.c
+8.b
+9.d
+10.c
+11.d
+12.d
+13.d
+14.a
+15.b
+16.a
+17.a
+18.c

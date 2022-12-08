@@ -1,0 +1,933 @@
+1.What is the output of the following program?
+
+
+data = 50
+try:
+    data = data/0
+except ZeroDivisionError:
+    print('Cannot divide by 0 ', end = '')
+else:
+    print('Division successful ', end = '')
+  
+try:
+    data = data/5
+except:
+    print('Inside except block ', end = '')
+else:
+    print('ABC', end = '')
+a) Cannot divide by 0 ABC
+b) Cannot divide by 0
+c) Cannot divide by 0 Inside except block ABC
+d) Cannot divide by 0 Inside except block
+
+2.What is the output of the following program?
+
+
+data = 50
+try:
+    data = data/10
+except ZeroDivisionError:
+    print('Cannot divide by 0 ', end = '')
+finally:
+    print('ABC ', end = '')
+else:
+    print('Division successful ', end = '')
+a) Runtime error
+b) Cannot divide by 0 ABC
+c) ABC Division successful
+d) ABC
+
+3.What is the output of the following program?
+
+
+value = [1, 2, 3, 4]
+data = 0
+try:
+    data = value[4]
+except IndexError:
+    print('ABC', end = '')
+except:
+    print('ABCD', end = '')
+a) ABCD
+b) ABC
+c) ABC ABCD
+d) Compilation error
+
+4.What is the output of the following program?
+
+
+value = [1, 2, 3, 4]
+data = 0
+try:
+    data = value[3]
+except IndexError:
+    print('GFG IndexError  ', end = '')
+except:
+    print('GeeksforGeeks IndexError  ', end = '')
+finally:
+    print('Geeks IndexError  ', end = '')
+  
+data = 10
+try:
+    data = data/0
+except ZeroDivisionError:
+    print('GFG ZeroDivisionError  ', end = '')
+finally:
+    print('Geeks ZeroDivisionError  ')
+a) GFG ZeroDivisionError GFG ZeroDivisionError
+b) GFG ZeroDivisionError Geeks ZeroDivisionError
+c) Geeks IndexError GFG ZeroDivisionError Geeks ZeroDivisionError
+d) Geeks IndexError GFG ZeroDivisionError
+
+
+5.
+What is the output of the following program?
+
+
+value = [1, 2, 3, 4, 5]
+try:
+    value = value[5]/0
+except (IndexError, ZeroDivisionError):
+    print('GeeksforGeeks ', end = '')
+else:
+    print('GFG ', end = '')
+finally:
+    print('Geeks ', end = '')
+a) Compilation error
+b) Runtime error
+c) GeeksforGeeks GFG Geeks
+d) GeeksforGeeks Geeks
+
+
+
+6.Consider the following code :
+class Customer: 
+    def __init__(self,cust_id, cust_name):
+        self.__cust_id = cust_id 
+        self.__cust_name = cust_name
+        self.__bill_amount = 0.0 
+class RegularCustomer(Customer): 
+    def __init__(self,cust_id, cust_name):
+        self.__cust_id = cust_id 
+        self.__cust_name = cust_name
+        self.__bill_amount = 0.0 
+        self.__discount = 5 
+Identify the OOP principle(s) that has/have been implemented in the above code :
+
+a. Only Encapsulation
+b. Only Inheritance
+c. Both Encapsulation and Inheritance
+d. Only Polymorphism
+
+
+7.When iterating over an object returned from csv.reader(), what is returned with each iteration?
+For example, given the following code block that assumes csv_reader is an object returned from csv.reader(), what would be printed to the console with
+each iteration?
+
+for item in csv_reader:
+ print(item)
+
+The full line of the file as a string
+The column data as a list
+The row data as a list
+The individual value data that is separated by the delimiter
+
+8.
+
+Output ??
+
+def myfunc(x,y, a):
+ print(x + y)
+nums = [3, 5, 2]
+myfunc(*nums)
+
+6
+8
+5
+7
+
+9.Suppose list1 is [2, 33, 222, 14, 25], What is list1[:-1]?
+
+[2, 33, 222, 14]
+Error
+25
+[25, 14, 222, 33, 2]
+
+
+10.
+class test:
+ def __init__(self):
+  self.variable = 'Old'
+  self.Change(self.variable)
+ def Change(self, var):
+  var = 'New'
+obj=test()
+print(obj.variable)
+
+Error because function change can’t be called in the __init__ function
+‘New’ is printed
+‘Old’ is printed
+Nothing is printed
+
+
+11.
+Find the output :
+a = 8.3
+b = 2
+print(a//b)
+
+a. 4.15
+b. 4
+c. 4.1
+d. 4.0
+
+
+12.
+Find the output :
+
+class A:
+def __init__(self):
+	self.__x = 1
+class B(A):
+	def display(self):
+		print(self.__x)
+def main():
+	obj = B()
+	obj.display()
+main()
+
+a. 1
+b. 0
+c. None
+d. Error
+
+13.Find the output :
+def sample(v1,v2,v3=10,v4=3,*v5):
+    v4+=2 
+    v2= v1*v4 
+    for v in v5:
+        v = v*v 
+    print(v5)  
+sample(0,0,1,2,3,4,5)
+What will the value of v5 ?
+
+a. (1,2,3,4,5)
+b. 3
+c. Type Error
+d. (3,4,5)
+14.
+Find the output :
+class A:
+	def __init__(self,x=3):
+		self._x = x
+class B(A):
+	def __init__(self):
+		super().__init__(5)
+	def display(self):
+		print(self._x)
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 5
+b. 3
+c. Error, class member x has two values
+d. Error, protected class member can’t be accessed in a subclass
+
+15.
+Find the output :
+class A:
+	def __init__(self,x=3):
+		self._x = x
+class B(A):
+	def __init__(self):
+		super().__init__()
+	def display(self):
+		print(self._x)
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 5
+b. 3
+c. Runtime Error
+d. Error, protected class member can’t be accessed in a subclass
+
+16.
+Find the output :
+count = 1
+def doThis():
+	global count
+	for i in (1, 2, 3):
+		count += 1
+doThis()
+print (count)
+a. 4
+b. 3
+c. 2
+d. 0
+
+17.
+
+Find the output :
+class student:
+	def __init__(self):
+		self.marks = 97
+		self.__cgpa = 8.7
+	def display(self):
+		print(self.marks)
+obj=student()
+print(obj._student__cgpa)
+a. The program runs fine and 8.7 is printed
+b. Error because private class members can’t be accessed
+c. Error because the proper syntax for name mangling hasn’t been implemented
+d. The program runs fine but nothing is printed
+
+18.
+Find the output :
+def procedural(val1): 
+    try: 
+        sum1=0 
+        for item in str(val1):
+            sum1+=int(item_val)
+    except TypeError:
+        print("Type error occurred")
+    finally:
+        print("Finally in function")
+    print("Function executed successfully")
+try: 
+    procedural(792)
+    print("Try handled")
+except ValueError:
+    print("Value error occurred")
+except NameError:
+    print("Name error occurred")
+finally:
+    print("Finally in main")
+a.
+Finally in function
+Value error occurred
+Finally in main
+Try handled
+
+b.
+Finally in function
+Value error occurred
+Function executed successfully
+Finally in main
+Try handled
+
+c.
+Finally in function
+Name error occurred
+Finally in main
+
+d.
+Finally in function
+Value error occurred
+Name error occurred
+Try handled
+
+
+19.
+
+Find the output :
+print('ab cd-ef'.title())
+a. Ab cd-ef
+b. Ab Cd-ef
+c. Ab Cd-Ef
+d. None of the mentioned
+capitalize()---Ab cd-ef
+
+20.
+Find the output :
+a = (1, 2)
+a[0] +=1
+a[0]=a[0]+1 XXXX
+a[0]=1 XXXXX
+a. (1,1,2)
+b. 2
+c. Type Error
+d. Syntax Error
+
+
+21.
+
+Find the output :
+class Test:
+	def __init__(self):
+		self.x = 0
+class Derived_Test(Test):
+	def __init__(self):
+		self.y = 1
+def main():
+	b = Derived_Test()
+	print(b.x,b.y)
+main()
+a. 0 1
+b. 0 0
+c. Error
+d. 1 0
+
+
+22.
+
+Find the output :
+class change:
+	def __init__(self, x, y, z):
+		self.a= x - y * z#-5
+x =change(1,2,3)
+
+#1.creating an object
+#2.calls an init method
+#calling get attribute
+y =getattr(x,'a')#builtin function to access the value of attri
+setattr(x,'a', y)#builtin func to set the value of a attribute
+print(x.a)
+a. 6
+b. -5
+c. Error
+d. 0
+
+
+23.
+
+Find the output :
+class Demo:
+	def __init__(self):
+		self.x = 1
+	def change(self):
+		self.x = 10
+class Demo_derived(Demo):
+	def change(self):
+		self.x=self.x+1
+		return self.x
+def main():
+	obj = Demo_derived()
+	print(obj.change())
+main()
+a. 11
+b. 2
+c. 1
+d. An exception is thrown
+
+
+24.
+
+Find the output :
+class class1:
+	def __init__():
+		print("class1's __init__")
+class class2(class1):
+	def __init__():
+		print("class2's __init__")
+ob=class2()
+a. class1’s init
+b. Error
+c. class2’s init
+d. None of the above
+
+
+25.
+
+Which of the following is not a type of inheritance?
+a. Single-level
+b. Double-level
+c. Multiple
+d. Multi-level
+
+
+26.
+
+Find the output :
+class test:
+	def __init__(self):
+		print("Hello World")
+	def __init__(self):
+		print ("Bye World")
+obj=test()
+a. Hello World
+b. Compilation Error
+c. Bye World
+d. Ambiguity
+
+
+27.
+
+Find the output :
+int = 1
+def randommethod():
+	global int
+        #int=0
+	for i in (1, 2, 3):
+		int += 1
+randommethod()
+print(int)
+a. Compile Time Error
+b. 1
+c. Type Error
+d. 4
+
+
+28.
+
+To execute a python program using command prompt, which command is used ?
+a. execute python filename
+b. python
+c. run python
+d. None of these
+
+29.
+
+Find the output :
+class class1:
+	def __init__(me,b):
+		me.a=b
+		print(a)
+                #print(me.a)#self.a #attribute
+ob=class1(10)
+a. 10
+b. Error
+c. 0
+d. 1
+
+30.
+
+Find the output :
+class Computers:
+	def __init__(self, price):
+		self.price = price
+
+obj=Computers(30000)
+obj.quantity=12
+obj.keyboard=10
+a=Computers(20000)
+print(obj.quantity+len(obj.__dict__))
+dictionary={price:30000,quantity:12,keyboard:10}
+a.15
+b.2
+c.22
+d.None of the above
+
+
+31.
+
+Find the output :
+class A:
+	def __init__(self):
+		self.__x = 1
+             #   print(self.__x)
+       # def pr(self):
+             # print(self.__x)
+class B(A):
+	def display(self):
+		print(self.__x)
+                #super.__init__() 
+                #pr() 
+def main():
+	obj = B()
+	obj.display()
+main()
+a. 1
+b. 0
+c. None
+d. Error
+
+
+32.
+
+Find the output :
+x = 5
+
+def f1():
+	global x
+	x = 4
+def f2(a,b):
+	global x
+	return a+b+x
+f1()
+#x=3
+total = f2(1,2)
+print(total)
+a. Error
+b. 7
+c. 8
+d. 15
+
+
+33.
+
+Find the output :
+class A:
+	def __str__(self):
+		return '1'
+class B(A):
+	def __init__(self):
+		super().__init__()
+class C(B):
+	def __init__(self):
+		super().__init__()
+def main():
+	obj1 = B()
+	obj2 = A()
+	obj3 = C()
+	print(obj1, obj2,obj3)
+main()
+a. 1 1 1
+b. 1 2 3
+c. ‘1’ ‘1’ ‘1’
+d. An exception is thrown
+
+34.
+
+Find the output :
+dig = 0
+for i in range(0, 5, 0.1):
+    dig += i
+    i+=0
+print(dig)
+a. 5
+b. 0.1 + 0.2 + …….. + 4.99
+c. 0.1 + 0,2 + …….. + 4.00
+d. Error
+
+
+35.
+
+Find the output :
+class Test:
+	def __init__(self):
+		self.x = 0
+class Derived_Test(Test):
+	def __init__(self):
+		Test.__init__(self)
+		self.y = 1
+def main():
+	b = Derived_Test()
+	print(b.x,b.y)
+main()
+a. Error because class B inherits A but variable x isn’t inherited
+b. 0 0
+c. 0 1
+d. Error, the syntax of the invoking method is wrong
+
+36.
+
+Find the output :
+def f(x):
+	def f1(*args, **kwargs):
+		print("*", 5)
+		x(*args, **kwargs)
+		print("*", 5)
+	return f1
+@f
+def p(m):
+	p(m)
+
+#f(p)
+print("hello")
+
+passing a fn as a paramter inside a func
+
+#func is just like an object how ?????
+
+x=6
+
+def pr(l):
+   print(l*2)
+x=pr("Sagar")
+x()
+#SagarSagar
+
+
+a.
+*****
+hello
+b.
+*****
+*****
+hello
+c. *****
+d. hello
+
+
+37.
+
+Find the output :
+class A:
+	def test(self):
+		print("test of A called")
+class B(A):
+	def test(self):
+		print("test of B called")
+		super().test()
+class C(A):
+	def test(self):
+		print("test of C called")
+		super().test()
+class D(B,C):
+	def test2(self):
+		print("test of D called")
+obj=D()
+obj.test()
+a. test of B called
+test of C called
+b. test of C called
+test of B called
+c. test of B called
+test of C called
+test of A called
+d. Error, all the three classes from which D derives has same method test()
+
+
+38.
+
+Which of the following best describes polymorphism?
+a. Ability of a class to derive members of another class as a part of its own
+definition
+b. Means of bundling instance variables and methods in order to restrict access
+to certain class members
+c. Focuses on variables and passing of variables to functions
+d. having more than one form.
+
+
+39.
+
+Find the output :
+val = 154
+while(not(val)):
+	val **=2
+else:
+	val//=2
+print(val)
+a. 77.0
+b. 154.0
+c. 11858.0
+d. 23716.0
+e. None of above
+
+
+40.
+
+Find the output :
+lst = [1, 2, 3]
+lst.append([5,6,7,8,9,10])
+print(len(lst))
+a. 3
+b. 9
+c. 4
+d. Error
+
+
+41.
+
+Find the output :
+print(False=={})
+a. False
+b. True
+
+
+42.
+Find the output :
+class A:
+	def one(self):
+		return self.two()
+	def two(self):
+		return 'A'
+class B(A):
+	def two(self):
+		return 'B'
+obj1=A()
+obj2=B()
+print(obj1.two(),obj2.two())
+a. A A
+b. A B
+c. B B
+d. An exception is thrown
+
+
+43.
+
+ Find the output :
+a={}
+a[2]=1
+#a[1]=[2,3,4]
+a[1]=8
+print(a[1][1])
+
+a={2:1,1:[2,3,4]}
+
+a. [2,3,4]
+b. 3
+c. 2
+d. An exception is thrown
+
+
+44.
+
+Find the output :
+def i():
+    print("CODE")
+i = i()
+
+a. Unknown reference to ‘int’
+b. Error : i can’t be a variable name
+c. CODE
+d. None of these
+
+45.
+
+Find the output :
+numbers ={}
+letters ={}
+comb ={}
+numbers[1]=56
+numbers[3]=7
+letters[4]='B'
+comb['Numbers']= numbers
+comb['Letters']= letters
+print(comb)
+a. Error, dictionary in a dictionary can’t exist
+b. ‘Numbers’: {1: 56, 3: 7}
+c. {‘Numbers’: {1: 56}, ‘Letters’: {4: ‘B’}}
+d. {‘Numbers’: {1: 56, 3: 7}, ‘Letters’: {4: ‘B’}}
+
+
+46.
+
+Find the output :
+class Employee:
+    __counter=100
+    def __init__(self, name): 
+        self.name=name 
+        Employee.__counter+=1 
+        self.id = Employee.__counter
+
+    @staticmethod 
+    def get_counter():
+        return Employee.__counter
+employee1=Employee("Tino") 
+employee2=Employee("Chris")
+employee3=Employee("Robb") 
+print(Employee.get_counter()-100)
+a. 1
+b. 3
+c. 103
+d. 0
+
+
+47.
+
+Find the output :
+x=2
+2===10
+1000===8
+y=x<<2
+y=~y+1
+print(y)
+a. 4
+b. -4
+c. -8
+d. None of the above
+
+
+48.
+
+Find the output :
+fo = open("myfile.txt", "w")
+fo.writelines(12460)
+#writelines takes list as a parameter
+fo.close()
+a. TypeError
+b. myfile.txt now contains “12460”
+c. myfile.txt now contains 12460
+d. gives warning and writes the content
+
+
+49.
+
+Find the output :
+class myclass:
+	@staticmethod
+	def m1():
+		print("hello")
+ob=myclass()
+ob.m1()
+a. hello
+b. error
+c. Address of ob object
+d. None of the above
+
+
+50.
+
+Find the output :
+def outer():
+  global glo
+  glo = 20
+  def inner():
+    global glo
+    glo = 30
+    print(glo)
+glo = 10
+outer()
+print( glo)
+a. 10
+b. 20
+c. 30
+d. None of these
+
+
+
+Answers
+
+1.a.
+2.a
+3.b
+4.c
+5.d
+6.b
+7.c
+8.b
+9.d
+10.c
+11.d
+12.d
+13.d
+14.a
+15.b
+16.a
+17.a
+18.c
+19.c
+20.c
+21.c
+22.b
+23.b
+24.b
+25.b
+26.c
+27.d
+28.b
+29.a
+30.a
+31.d
+32.b
+33.a
+34.d
+35.c
+36.d
+37.c
+38.d
+39.a
+40.c
+41.a
+42.b
+43.b
+44.c
+45.d
+46.b
+47.c
+48.a
+49.a
+50.b

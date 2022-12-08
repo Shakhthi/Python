@@ -1,0 +1,166 @@
+40.
+What is the output of the following?
+i = 1
+while True:
+    if i % 3 == 0:
+        break
+    print(i)
+    i + = 1
+1 2 3
+1 2
+Syntax Error.
+None of these
+
+41.
+What is the output of the following program?  
+
+
+T1 = (1)
+T2 = (3, 4)
+T1 += 5
+print(T1)
+print(T1 + T2)
+a) TypeError 
+b) (1, 5, 3, 4) 
+c) 1 TypeError 
+d) 6 TypeError 
+
+42.
+
+What is the output of the following program? 
+ 
+D = {1 : 1, 2 : '2', '1' : 2, '2' : 3}
+D['1'] = 2
+print(3)
+a) 2 
+b) 3 
+c) ‘2’ 
+d) KeyError 
+
+43.
+
+Which of the options below could possibly be the output of the following program? 
+ 
+D = {1 : [1, 2, 3], 2: (4, 6, 8)}
+D[1].append(4)
+D = {1 : [1, 2, 3,4], 2: (4, 6, 8)}
+print(D[1], end = " ")
+L = [D[2]]
+D = {1 : [1, 2, 3,4], 2: [(4, 6, 8)]}
+L.append(10)
+D = {1 : [1, 2, 3,4], 2: [(4, 6, 8),10]}
+D[2] = tuple(L)
+D = {1 : [1, 2, 3,4], 2: ((4, 6, 8),10)}
+print(D[2])
+a) [1, 2, 3, 4] [4, 6, 8, 10] 
+b) [1, 2, 3, 4] ((4, 6, 8), 10) 
+c) [1, 2, 3, 4] TypeError: tuples are immutable 
+d) [1, 2, 3, 4] (4, 6, 8, 10) 
+
+44.
+What is the output of the following program? 
+
+
+temp = 'Geeks 22536 for 445 Geeks'
+data = [x for x in (int(x) for x in temp if x.isdigit()) if x%2 == 0]
+data = [x for x in (2,2,5,3,6,4,4,5) if x%2 == 0]
+data = [2,2,6,4,4]
+print(data)
+a) [2, 2, 6, 4, 4] 
+b) Compilation error 
+c) Runtime error 
+d) [‘2’, ‘2’, ‘5’, ‘3’, ‘6’, ‘4’, ‘4’, ‘5’] 
+
+45.
+ What is the output of the following program? 
+
+
+temp = ['Geeks', 'for', 'Geeks']
+arr = [i[0].upper() for i in temp]
+arr = [temp[i][0].upper() for i in range(len(temp))]
+
+print(arr)
+a) [‘G’, ‘F’, ‘G’] 
+b) [‘GEEKS’] 
+c) [‘GEEKS’, ‘FOR’, ‘GEEKS’] 
+d) Compilation error 
+
+46.
+
+What is the output of the following program? 
+
+
+data = [x for x in range(5)]
+temp = [x for x in range(7) if x in data and x%2==0]
+temp=[x for x in [0,1,2,3,4,5,6] if x in data and x%2==0]
+temp=[x for x in [0,2,4] if x in data and x%2==0]
+temp=[0,2,4]
+print(temp)
+a) [0, 2, 4, 6] 
+b) [0, 2, 4] 
+c) [0, 1, 2, 3, 4, 5] 
+d) Runtime error
+
+40.Syntax Error
+41.D
+42.B
+43.B
+44.A
+45.A
+46.B
+
+
+
+
+
+
+
+Till Sunday
+Quiz-6,7,8
+Assignment-4
+
+
+
+1.Local and global-D
+local only inside a func
+global - both inside and outside 
+
+2.Multiple statement list compre-D
+3.Dictionary-Done
+4.Dictionary compre-Done
+5.Pass by reference/Value-Done
+6.Sets
+7.File Handling
+8.BUilt In Functions
+9.REGEX
+10.Lambda-Done
+11.Module and packages
+
+
+Only two  weeks is remaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

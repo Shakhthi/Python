@@ -1,0 +1,82 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 29 21:28:48 2020
+
+@author: SAGAR
+"""
+
+
+
+
+# import testmod for testing our function 
+from doctest import testmod 
+
+# define a function to test 
+def factorial(n): 
+	''' 
+	This function calculates recursively and 
+	returns the factorial of a positive number. 
+	Define input and expected output: 
+	>>> factorial(3) 
+	6 
+	>>> factorial(5) 
+	120 
+	'''
+	if n <= 1: 
+		return 1
+	# wrong logic for factorial 
+	return factorial(n - 1) 
+
+# call the testmod function 
+if __name__ == '__main__': 
+	testmod(name ='factorial', verbose = True) 
+
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 29 21:28:36 2020
+
+@author: SAGAR
+"""
+
+
+# import testmod for testing our function
+from doctest import testmod
+
+# define a function to test
+def factorial(n):
+	'''
+	This function calculates recursively and
+	returns the factorial of a positive number.
+	Define input and expected output:
+	>>> factorial(3)
+	6
+	>>> factorial(5)
+	120
+	'''
+	if n <= 1:
+		return 1
+	return n * factorial(n - 1)
+
+# call the testmod function
+if __name__ == '__main__':
+	testmod(name ='factorial', verbose = True)
+
+
+
+import math
+import pytest
+def test_sqrt():
+   num = 25
+   assert math.sqrt(num) == 5
+
+def testsquare():
+   num = 7
+   assert 7*7 == 40
+
+
+
+   then run in the terminal pytest -v test3.py  
+
+
+   

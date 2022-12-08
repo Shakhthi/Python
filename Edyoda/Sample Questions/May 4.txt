@@ -1,0 +1,157 @@
+Q 1 - What is the output for −
+
+S = [['him', 'sell'], [90, 28, 43]]
+
+S[0][1][1]
+
+A - 'e'
+
+B - 'i'
+
+C - '90'
+
+D - 'h'
+
+Q2
+
+What is output of following −
+
+print('abbzxyzxzxabb'.count(‘abb’,-10,-1))
+
+A - 2
+
+B - 0
+
+C - 1
+
+D - Error
+
+
+Q3
+What is the output of the following program? -Multiple correct
+dictionary = {'GFG' : 'geeksforgeeks.org',
+              'google' : 'google.com',
+              'facebook' : 'facebook.com'}
+del dictionary['google']
+for key, values in dictionary.items():
+    print(key)
+dictionary.clear()
+for key, values in dictionary.items():--1
+    print(key)
+del dictionary;
+for key, values in dictionary.items():--2
+    print(key)
+a) Both b and d 
+b) Runtime error 
+c) GFG 
+facebook 
+d) facebook 
+GFG
+
+Q4
+What is the output of the following program? 
+dictionary1 = {'Google' : 1,
+               'Facebook' : 2,
+               'Microsoft' : 3
+               }
+dictionary2 = {'Jio' : 1,
+               'Microsoft' : 2,
+               'Youtube' : 3
+               }
+dictionary1.update(dictionary2);
+for key, values in dictionary1.items():
+    print(key, values)
+a) Compilation error 
+b) Runtime error 
+c) Google 1
+Facebook 2
+Microsoft 2
+Jio 1
+Youtube 3
+d) None of these
+
+Q5
+What is the output of the following program? 
+
+
+dictionary1 = {'Netflix' : 1,
+               'Google' : 2,
+               'Netflix' : 3,
+               }
+print(dictionary1['Netflix'])
+a) Compilation error due to duplicate keys 
+b) Runtime time error due to duplicate keys 
+c) 3 
+d) 1
+
+Q6
+
+What is the output of the following program? 
+
+
+temp = dict()
+temp['key1'] = {'key1' : 44, 'key2' : 566}
+temp['key2'] = [1, 2, 3, 4]
+for (key, values) in temp.items():
+    print(values, end = "")
+a) Compilation error 
+b) {‘key1’: 44, ‘key2’: 566}[1, 2, 3, 4] 
+c) Runtime error 
+d) None of the above
+
+Q7
+
+What is the output of the following program? 
+ 
+
+
+List = [True, 50, 10]
+List.insert(2, 5)   
+print(List, "Sum is: ", sum(List))
+a) [True, 50, 10, 5] Sum is: 66 
+b) [True, 50, 5, 10] Sum is: 65 
+c) TypeError: unsupported operand type(s) for +: ‘int’ and ‘str’ 
+d) [True, 50, 5, 10] Sum is: 66 
+
+
+Q8
+
+What will be the Console output of the following Python code?
+
+x = 'abcd'
+for i in x:
+    i.upper()
+a) a B C D
+b) No Output
+c) a b c d
+d) A B C D
+
+Q9
+
+What will be the output of the following Python program?
+
+def foo(x):
+    x[0] = ['def']
+    x[1] = ['abc']
+    return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
+a) Error
+b) None
+c) False
+d) True
+
+Answers
+1.A
+2.B
+3.B and D
+4.C
+5.C
+6.B
+7.D
+8.B
+9.D
+
+
+
+

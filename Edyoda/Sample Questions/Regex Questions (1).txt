@@ -1,0 +1,439 @@
+
+
+Q1Write a Python program to check that a 
+string contains only a certain set of characters 
+(in this case a-z, A-Z and 0-9)
+
+'[a-zA-Z0-9]'
+
+
+
+
+
+
+Ans-
+
+p=[a-zA-Z0-9]
+
+import re
+
+
+p=(r'[a-zA-Z0-9]')
+s=input()
+a=re.findall(p,s)
+
+print(a)
+
+Q2 Write a Python program that matches 
+a string that has an a at the start followed 
+by zero or more b's in the end.
+
+Ans-
+import re
+p=('^ab*$')
+s=input()
+a=re.findall(p,s)
+
+print(a)
+
+Q3Write a Python program that 
+matches a string that has an a at the start 
+followed by one or more b' in the end
+
+^ab+$
+
+Ans--
+import re
+p=('^ab+$')
+s=input()
+a=re.findall(p,s)
+
+
+Q4Write a Python program that matches 
+a string that has an a in the start followed 
+by zero or one 'b' in the end.
+
+import re
+p=('ab?$')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+
+
+Q5
+
+Write a Python program that matches
+a string that has an a followed by three 'b'.
+
+import re
+p=('ab{3}')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q6
+Write a Python program that matches 
+a string that has an a followed 
+by two to three 'b'.
+
+import re
+p=('ab{2,3}')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q7Write a Python program to find 
+sequences of lowercase letters joined 
+with a underscore.
+a_
+a_l
+aa_zz
+aaaaaa_kvfoulfvlvl
+import re
+p= '[a-z]+_[a-z]+'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q8Write a Python program to find the sequences of 
+one upper case letter followed by lower case letters.
+
+
+[A-Z][a-z]+
+
+
+
+import re
+p= '[A-Z]+_[a-z]+'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q9Write a Python program that matches a 
+string that has an 'a' followed by anything
+(1 charcter), ending in 'b'
+
+
+^a--XXXX
+a.b$----a b   
+AAAa_bbbB
+
+
+import re
+p= 'a.b$'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q10Write a Python program that matches 
+a word at the beginning of a string.
+
+^[a-zA-Z0-9_]+
+^\w+
+
+
+
+
+import re
+p= r'^\w+'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+
+
+
+Q11.Write a Python program that matches a 
+word at the end of string, with optional 
+punctuation   -- ? ! and .
+
+'\w+[!?.]$'
+
+
+import re
+p= r'[a-zA-Z0-9]+[?!.]+$'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+
+
+'\w*z\w*'
+Bestz--True
+z--True
+az-True
+
+Z
+Zebra
+newZealand
+aza
+_z_
+
+
+Q12
+Write a Python program that matches a word 
+containing 'z'
+
+import re
+p= ('[A-Za-z0-9_]*z[A-Za-z0-9_]*')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q13Write a Python program that matches 
+a word containing 'z', not at the start or 
+end of the word
+
+z either at start or at the end only-\bz\b
+
+AzA---No
+
+import re
+p= ('\Bz\B')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q14Write a Python program to match a 
+string that contains only upper and lowercase 
+letters, numbers, and underscores.
+
+\w+
+
+
+import re
+p= ('^[a-zA-Z0-9_]*$')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+
+
+
+
+
+
+
+
+
+Q15Write a Python program where a string 
+will start with a specific number(ex-5).
+
+
+567777--yess
+85777--no
+5___--yes
+5_A--Yes
+_5AAAA-No
+
+5     -Yes
+import re
+p= (r'^5.*')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+
+Q17Write a Python program to check for 
+a number at the end of a string.
+A99999
+[0-9]+$   
+A9999---9999
+.*[0-9]+$
+A9999---A9999
+
+
+
+A99999-True
+9-True
+_9-True
+
+
+import re
+p= (r'.*[0-9]$')
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q18Write Python program to 
+search the numbers (0-9) of length 
+between 1 to 3 in a given string
+
+[0-9]{1,3}
+\d{1,3}
+
+import re
+p=r"([0-9]{1,3})"
+s=input()
+a=re.findall(p,s)
+print(a)
+
+
+Q19
+Write a Python program 
+to abbreviate 'Road' as 'Rd.' 
+in a given string
+
+import re
+street = '21 Ramkrishna Road'
+print(re.sub('Road$', 'Rd.', street))
+
+Q20
+Write a Python program to 
+extract year, month and date from an url.
+
+import re
+p=r'/(\d{4})/(\d{1,2})/(\d{1,2})/'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+url1= "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell-beckhams-fame-rests-on-one-stupid-little-ball-josh-norman-tells-author/"
+
+r'(\d{4})-(\d{1,2})-(\d{1,2})'
+
+Q21
+Write a Python program to 
+match if two words from a list of 
+words starting with letter 'P'.
+
+(^P+) (^P+)
+import re
+p=r'(P.*) (P.+)'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q22Write a Python program to 
+separate and print 
+the numbers of a given 
+string.
+
+
+
+
+import re
+p=r'[0-9]+'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q23Extract mail id
+
+import re
+p=r'\w+@[A-Za-z]+.com'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q24
+
+Write a Python program 
+to find all words starting 
+with 'a' or 'e' in a given
+string.
+
+^a|^e
+
+I study in edyoda--No
+
+\b[a,e]\w*-edyoda
+
+
+
+import re
+p=r'\b[ae]\w*'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q25
+Write a Python program 
+to replace all occurrences
+of space, comma, or dot 
+with a colon.
+
+import re
+text = 'Python Exercises, PHP exercises.'
+print(re.sub("[ ,.]", ":", text))
+
+
+Q26
+Write a Python program 
+to find all five characters 
+long word in a string.
+
+import re
+p=r'(\b\w{5}\b)'
+s=input()
+a=re.findall(p,s)
+print(a)
+Q27
+
+Write a Python program 
+to find all three, four, 
+five characters long words 
+in a string.
+3,4,5--3,5
+\b\w{3,5}\b
+
+import re
+p=r'(\b\w{3,5}\b)'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q28
+Write a Python program 
+to find all words which 
+are at least 4 characters 
+long in a string.
+
+import re
+p=r'(\b\w{4,}\b)'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+Q29
+Write a Python program 
+to remove multiple spaces 
+in a string.
+
+import re
+text1 = 'Python      Exercises'
+print("Original string:",text1)
+print("Without extra spaces:",re.sub(' +',' ',text1))
+
+\s+
+ +
+
+Q30
+
+Write a Python program to
+extract values between 
+quotation marks of a string.
+''
+""
+""" """
+""
+import re
+p=r'"(.*?)"'
+s=input()
+a=re.findall(p,s)
+print(a)
+
+

@@ -1,0 +1,223 @@
+# Python program to demonstrate
+# use of class method and static method.
+from datetime import date
+
+class Person:
+	def __init__(self, name, age):
+		self.name = name
+		self.age = age
+	
+	# a class method to create a Person object by birth year.
+	@classmethod
+	def fromBirthYear(cls, name, year):
+		return cls(name, date.today().year - year)
+	
+	# a static method to check if a Person is adult or not.
+	@staticmethod
+	def isAdult(age):
+		return age > 18
+
+person1 = Person('mayank', 21)
+person2 = Person.fromBirthYear('mayank', 1996)
+
+print (person1.age)
+print (person2.age)
+
+# print the result
+print (Person.isAdult(22))
+
+
+
+# Python program showing
+# abstract base class work
+
+from abc import ABC, abstractmethod
+
+class Polygon(ABC):
+
+	@abstractmethod
+	def noofsides(self):
+		pass
+
+class Triangle(Polygon):
+
+	# overriding abstract method
+	def noofsides(self):
+		print("I have 3 sides")
+
+class Pentagon(Polygon):
+
+	# overriding abstract method
+	def noofsides(self):
+		print("I have 5 sides")
+
+class Hexagon(Polygon):
+
+	# overriding abstract method
+	def noofsides(self):
+		print("I have 6 sides")
+
+class Quadrilateral(Polygon):
+
+	# overriding abstract method
+	def noofsides(self):
+		print("I have 4 sides")
+
+# Driver code
+R = Triangle()
+R.noofsides()
+
+K = Quadrilateral()
+K.noofsides()
+
+R = Pentagon()
+R.noofsides()
+
+K = Hexagon()
+K.noofsides()
+
+
+# Python program showing
+# abstract class cannot
+# be an instantiation
+from abc import ABC,abstractmethod
+
+class Animal(ABC):
+	@abstractmethod
+	def move(self):
+		pass
+class Human(Animal):
+	def move(self):
+		print("I can walk and run")
+
+class Snake(Animal):
+	def move(self):
+		print("I can crawl")
+
+class Dog(Animal):
+	def move(self):
+		print("I can bark")
+
+class Lion(Animal):
+	def move(self):
+		print("I can roar")
+
+c=Animal()
+
+
+class One:
+    def __init__(self, a):
+        self.a = a
+    def __add__(self, object2):
+        return self.a + object2.a
+class Two:
+    def __init__(self, a):
+        self.a = a
+    def __add__(self, object2):
+        return self.a + object2.a
+a_instance = One(10)
+b_instance = Two(20)
+print(a_instance + b_instance)
+# Output: 30
+
+class A:
+    def __init__(self, item):
+        self.item = item
+    def __getitem__(self, index):
+        return self.item[index]
+a = A([1, 2, 3])
+print("First item:" ,{a[0]})
+print("Second item:" ,{a[1]})
+print("Third item:", {a[2]})
+# Output:
+# First item: 1
+# Second item: 2
+# Third item: 3
+
+
+class SetItemExample:
+    def __init__(self, item):
+        self.item = item
+    def __setitem__(self, index, item1):
+        self.item[index] = item1
+setitem_instance = SetItemExample([1, 2, 3])
+print("Items before setting:", {setitem_instance.item})
+setitem_instance[1] = 5
+print("Items after setting:", {setitem_instance.item})
+# Output
+# Items before setting: [1, 2, 3]
+# Items after setting: [1, 5, 3]
+
+class ReprExample:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    def __repr__(self):
+        return f"ReprExample(a={self.a}, b={self.b}, c={self.c})"
+repr_instance = ReprExample(1, 2, 3)
+print(repr_instance)
+# Output
+# ReprExample(a=1, b=2, c=3)
+
+
+class LenExample:
+    def __init__(self, item):
+        self.item = item
+    def __len__(self):
+        return len(self.item)
+len_instance = LenExample([1, 2, 3])
+print(len(len_instance))
+# Output: 3
+
+
+class Comparison:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, object2):
+        return self.a < object2.a
+    def __gt__(self, object2):
+        return self.a > object2.a
+    def __le__(self, object2):
+        return self.a <= object2.a
+    def __ge__(self, object2):
+        return self.a >= object2.a
+    def __eq__(self, object2):
+        return self.a == object2.a
+    def __ne__(self, object2):
+        return self.a != object2.a
+a = Comparison(1)
+b = Comparison(2)
+print(
+    a < b,
+    a > b,
+    a <= b,
+    a >= b,
+    a == b,
+    a != b
+)
+# Output
+# True False True False False True
+
+class ContainsExample:
+    def __init__(self, items):
+        self.items = items
+    def __contains__(self, item):
+        return item in self.items
+contains_instance = ContainsExample([1, 2, 3, 4, 5])
+print(4 in contains_instance)
+
+
+
+class Squares:
+    def __init__(self, start, stop):
+        self.start = start
+        self.stop = stop
+    def __iter__(self):
+        for value in range(self.start, self.stop + 1):
+            yield value ** 2
+i = iter(Squares(1, 3))
+print(next(i))
+print(next(i))
+print(next(i))
+# Output: 1 4 9

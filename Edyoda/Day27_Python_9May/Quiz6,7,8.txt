@@ -1,0 +1,410 @@
+
+
+Quiz 6
+
+1.
+
+Select which statements are true for Python function
+
+a) It is necessary to use a return statement in Python function.
+b) We can reuse functions in a program.
+c) Python functions always returns a value.
+d) A function is a code block that only executes when it is called.
+
+2.
+def fun1(name, age=20):
+    print(name, age)
+
+fun1('Emma', 25)
+
+Emma 25
+
+3.
+
+
+def fun1(name, age=20):
+    print(name, age)
+
+fun1(*tuple("Emma 29".split(" ")))
+
+4.
+
+def outerFun(a, b):
+    def innerFun(c, d):
+        s=c+d
+        print("s=",s)
+        return s
+    return innerFun(a, b)
+    print("s2",s)
+    print(a)
+    return a
+
+result = outerFun(5, 10)
+print(result)
+
+5.
+
+def fun1(num):
+    return num + 25
+
+fun1(5)
+print(num)
+
+6.
+Choose the correct function declaration of  fun1() so that we can execute the following function call successfully
+
+fun1(25, 75, 55)
+fun1(10, 20)
+def fun1(**kwargs)
+No, it is not possible in Python
+def fun1(args*)
+def fun1(*data)
+Correct Option
+
+
+7.
+What is the output of the following displayPerson() function call
+
+def displayPerson(*args):
+    for i in args:
+        print(i)
+
+displayPerson(name="Emma", age="25")
+
+8.
+Python function always returns a value.
+
+Falsef
+True-correct
+
+
+9.
+def display(**kwargs):
+    for i in kwargs:
+        print(i)
+display(emp="Kelly", salary=9000)
+
+emp salary
+
+https://www.geeksforgeeks.org/args-kwargs-python/
+
+10.
+
+gpack={'ts':'I wear Duke','s':'I wear Nike'}
+
+
+def p(ts,s):
+    print("I wear",ts.split(" ")[0])
+
+p(**gpack)
+
+
+
+gpack={'ts':'I wear Duke','s':'I wear Nike'}
+
+
+def p(ts,s):
+    print("I wear",ts.split(" ")[0])
+
+p(*gpack)
+
+
+gpack={'ts':'I wear Duke','s':'I wear Nike'}
+
+
+def p(ts,s):
+    print("I wear",ts.split(" ")[0])
+
+p(gpack)
+11.
+What function in random module should you use to generate random numbers from range 10 to 20 (including both 10 and 20)
+random.randrange(10,20,2)
+random.randrange(10,20)
+random.randint(10,20)
+Correct Option
+random.randint(10,21)
+
+
+12.
+self explained
+13.
+self explained
+
+14.
+
+Choose the correct Statements out of all these:
+
+a) sort() function works in place. For example if x.sort() is done than x will be sorted.
+
+b) sorted() function does not work in place. For example if x.sorted() is done, than x will not be sorted but x.sorted() will return a sorted form of x.
+
+c) random and math are builtin modules.
+
+d) We have to use import statement before using any builtin modules.
+
+All
+15.
+
+x = 75
+def myfunc():
+    x = x + 1
+    print(x)
+
+myfunc()
+print(x)
+
+error
+
+
+16.
+
+x = 'happy'
+
+def summation(a):
+    global x
+    x = 'sad'
+    
+summation('mango')
+print(x)
+
+sad
+17.
+
+x = 'happy'
+
+def summation():
+    print(x)
+    x = 'sad'
+
+summation()
+Error
+
+18.
+
+Syntax error
+
+
+
+
+Quiz 7
+
+1.
+
+What does the function re.search do?
+
+matches a pattern at the start of the string
+matches a pattern at any position in the string-Correct
+Correct Option
+such a function does not exist
+none of the mentioned
+
+2.
+
+Ans-a list of lines
+
+3.
+
+To read the entire remaining contents of the file as a string from a file object infile, we use ____________
+
+infile.read(2)
+infile.read()-Correct Option
+infile.readline()
+infile.readlines()
+
+4.
+
+To read two characters from a file object infile, we use ____________
+
+infile.read(2)-Correct Option
+infile.read()
+infile.readline()
+infile.readlines()
+
+5.
+Which of the following statements are true?
+
+When you open a file for reading, if the file does not exist, an error occurs
+When you open a file for writing, if the file does not exist, a new file is created
+When you open a file for writing, if the file exists, the existing file is overwritten with the new file
+All of the mentioned-Correct
+
+
+6.
+
+The character Dot (that is, ‘.’) in the default mode, matches any character other than _____________
+
+caret
+ampersand
+percentage symbol
+newline-Correct
+
+
+
+7.
+
+The expression a{5} will match _____________ characters with the previous regular expression.
+
+{‘animal’: ‘horses’, ‘verb’: ‘are’, ‘adjective’: ‘fast’}
+exactly 5-Correct
+Correct Option
+exactly 4
+5 or more
+
+
+
+8.
+
+ ________ matches the start of the string.
+________ matches the end of the string.
+
+‘^’, ‘$’-Correct Option
+‘$’, ‘^’
+‘$’, ‘?’
+‘?’, ‘^’
+
+9.
+
+What does the function re.match do?
+
+matches a pattern at the start of the string-Correct Option
+matches a pattern at any position in the string
+such a function does not exist
+none of the mentioned
+
+10.
+
+Choose the Regx to match string starting with a and can contain any char later.
+
+"a.*"
+"a.**"
+"^a.*"--Correct Option
+None of the above
+
+
+Quiz 8
+
+1.re.findall(regx,str)
+
+2.re
+
+3.
+def f():
+    x=15
+    print(x)
+
+x=12
+f()
+
+Ans-15
+
+4.t[3] = 45
+
+5.Which of the following commands will create a list?
+
+list1 = list()
+list1 = []
+list1 = list([1, 2, 3])
+
+6.
+x = ['ab', 'cd']
+for i in x:
+    i.upper()
+print(x)
+
+Ans-['ab', 'cd']
+
+7.
+print("xyyzxyzxzxyy".count('yy'))
+
+Ans-2
+
+8.
+
+In Python, strings are…
+
+
+
+a) char arrays
+
+b) str objects
+
+c) immutable
+
+d) changeable
+
+
+Ans-b and c
+
+9.
+
+Given the file sample.txt which of the following is the correct way to open the file for reading as a text file? Select all that apply.
+
+
+
+a) open('sample.txt')
+
+b) open('sample.txt', 'a')
+
+c) open('sample.txt', 'r')
+
+d) open('sample.txt', 'w')
+
+
+Ans-a and c
+
+10.
+
+In Python, a variable may be assigned a value of one type, and then later assigned a value of a different type:
+
+Ans True
+
+11.
+
+Two most important things about Keys in Dictionary and Sets in Python:-
+
+a) Keys are Mutable
+
+b) Keys should be unique
+
+c) Keys should not be unique
+
+d) Keys should be immutable
+
+Ans b and d
+
+
+
+12.
+func = lambda x: return x
+print(func(2))
+
+Invalid syntax
+
+13.
+
+Note: There can be multiple correct answer, Choose All.
+
+Which of the following are true of Python dictionaries:
+
+
+
+a) Items are accessed by their position in a dictionary.
+
+b) Items are accessed by their position in a dictionary.
+
+c) Dictionaries are accessed by key.
+
+d) Dictionaries are mutable.
+
+e) Dictionaries can be nested to any depth.
+
+f) All the keys in a dictionary must be of the same type.
+
+
+Ans c,d, and e
+
+
+
+
+
+

@@ -1,0 +1,254 @@
+OOPS
+Classes-Template/Blueprint of objects 
+Objects-is created on the basis of 
+objects
+-anythng ahving properties,behaviour and
+ID
+properties,attributes,variables as well
+behaviour,methods or functions
+Class-Vehicle
+attr-wheels,fuel,seater,name
+behaviours--consumption of fuel
+commuting, transportation
+objects-sample objects auto,car,truck,bus,bike
+
+
+
+Variables---instance and class
+instance--sep copy for sep objects
+class-single copy for sep objects--saving of 
+space/memory
+
+Ano, Name, Gender and Place--Instance
+A1,A2,A3-- are 3 instances
+org="UIDAI"--class variable
+
+A1=Aadhar(103,"S",F,Kolkata)
+A2=Aadhar(123,"Sagar",M,Noida)
+A3=Aadhar(113,"Suraj",M,Delhi)
+
+
+default--does not take any para
+already present if no Para const
+
+parametrized--it takes para(min1)
+if para is present then have to
+create def  construc seperately
+
+
+self--points to the current instance
+
+
+attributes,methods and constructors
+
+
+Single Inheritence
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)
+
+after inheritence
+
+B-x,y,printx(self),printy(self),z,printz(self)
+
+Syntax----class B(A):
+
+Multiple Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B--z,printz(self)-2
+
+
+Class C(A,B)--p,printp(self)-8
+==C(2)+A(4)+B(2)==8
+
+
+Multilevel Inheritence
+
+
+
+Class-A-x,y,printx(self),printy(self)
+
+Class B(A)--z,printz(self)-2
+
+Class C(B)--p,printp(self)
+
+
+Hirarchical Inheritence
+
+Class-A-x,y,printx(self),printy(self)-4
+
+Class B(A)--z,printz(self)-6
+
+Class C(A)--p,printp(self)-6
+
+#Polymorphism and Method Overriding---comes from Multiple Inheritence
+
+
+#Method Overriding 
+
+#when you try to redefine a method with same name but diff implementation
+
+
+
+
+
+
+1.Concrete classes- have methods with implementation
+2.Abstract classes -only have methods without implementation(abstract method)
+--cannot have any func definition(use pass)
+
+abstract method
+cannot have any func definition
+uses @abstract decorator
+Abstract class can never have an object instance
+
+Method Overriding
+can have func definition
+does not uses any decorator
+class can  have an object instance
+ 
+
+exa of cc
+
+
+Class A:
+ def __init__(self):
+    print("A")
+ def  d(self):
+  print("display")
+
+
+ d is an abstract method which is implemented in Class B
+
+import abc 
+Class A(abc):
+  @abstractmethod
+  def d(self):
+    pass
+
+Class B(A):
+  def d(self):
+    print("this is B")
+
+Class C(A):
+  def d(self):
+    print("this is C")
+
+
+Class A():
+  def d(self):
+    print("This is A")
+
+Class B(A):
+  def d(self):
+    print("this is B")
+
+Class C(A):
+  def d(self):
+    print("this is C")
+
+
+
+decorators--@
+
+A-which adds ttwo numbers
+you can decorate that func by adding any functionality
+
+A-which adds ttwo numbers---I wantto round it off
+If I want any modification in a func
+-- change the original function---
+--extending the func using decorators
+
+def A(x,y):
+ return x+y
+
+-- change the original function---
+
+
+def A(x,y):
+ return round(x+y)
+
+
+--extending the func using decorators
+
+@decorators
+def A(x,y):
+ return x+y
+
+decorators--many types-----one of them is abstract
+
+
+MRO-Method resolution Order---MULTIPLE Inheritence
+
+
+class A:
+class A():
+class A(object):
+
+class A():
+ pass
+class B(A):
+ pass
+class C(A):
+ pass
+class D(B,C):
+ pass
+e=D()
+e.u()
+mro(A)--A->Object
+mro(B)--B->A->Object
+mro(C)--C->A->Object
+mro(D)--D->B->C->A->Object
+
+Class A():
+ pass
+class B():
+ pass
+class C():
+ pass
+class X(A,B):
+ pass
+class Y(B,C):
+ pass
+class P(X,Y,C):
+ pass
+mro(A)--A-O
+mro(X)--X-A-B-O
+mro(Y)--Y-B-C-O
+mro(P)--P X Y C B A O
+class '__main__.P'>, 
+<class '__main__.X'>, 
+<class '__main__.A'>, 
+<class '__main__.Y'>, 
+<class '__main__.B'>, 
+<class '__main__.C'>, 
+<class 'object'>]
+
+
+C3 Algorithm
+
+mro(P)=P+merge(mro(X)+mro(Y)+mro(C)+XYC)
+      =P+merge(XABO+YBCO+CO+XYC)
+      =P+X+merge(ABO+YBCO+CO+YC)
+      =P+X+A+merge(BO+YBCO+CO+YC)
+      =P+X+A+Y+merge(BO+BCO+CO+C) 
+      =P+X+A+Y+B+merge(O+CO+CO+C)
+      =P+X+A+Y+B+C+merge(O+O+O)
+      =P+X+A+Y+B+C+O  
+
+
+ABCDEF
+head element-A
+Tail elements-BCDEF
+
+
+mro(A)=A+merge(mro(B)+mro(C)+BC)
+=A+merge(BDEO+CDFO+BC)
+=A+B+merge(DEO+CDFO+C)
+=A+B+C+merge(DEO+DFO)
+=A+B+C+D+merge(EO+FO)
+=ABCDE+merge()
+
