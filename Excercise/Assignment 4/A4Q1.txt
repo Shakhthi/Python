@@ -1,0 +1,6 @@
+#A4Q1
+
+l = lambda x: x+25 
+
+x = int(input())
+print(l(x))

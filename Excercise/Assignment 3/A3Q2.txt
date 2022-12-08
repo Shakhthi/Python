@@ -1,0 +1,7 @@
+#A3Q2 String inside the Function
+
+def reverseString(S):
+    return S[::-1]
+s = input(" Enter the string to reverse ")
+Rev = reverseString(s)
+print(" Reversed String: ",Rev)

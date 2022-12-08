@@ -1,0 +1,38 @@
+from collections import defaultdict
+
+class Graph:
+    
+    def __init__(self):
+        self.graph = defaultdict(list) 
+        
+    def add_edge(self, e, v): 
+            self.graph[e].append(v)  
+     
+        
+    def  DFS(self, vertex, visited, graph):
+                visited.add(vertex)
+                print(vertex, end=" ")
+                
+                for adjacent in self.graph[vertex]:
+                    if adjacent not in visited:
+                        self.DFS(adjacent,visited, graph)
+
+    def view_graph(self):
+        for e,v in self.graph.items():
+            print(" {} -> {}".format(e,v))
+                           
+g = Graph()
+
+l = [{int(input("Enter 1 Element")), int(input("Enter 2 Element"))} for i in range(int(input("Enter the Size of the Set")))]
+
+node = int(input(" Enter the Node "))
+
+visited = set()
+
+for i in range(0,len(l)): 
+    t = tuple(l[i])
+    g.add_edge(t[1], t[0])
+    
+g.DFS(node, visited, g) 
+
+

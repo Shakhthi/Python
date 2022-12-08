@@ -1,0 +1,8 @@
+#Q2 Printing a Dictionary of Keys as alphabets and values as it's corresponding ASCII values
+d={}
+a = ord('a')
+b = ord('z')
+for i in range(a,b+1):
+    element = chr(i)
+    d[element] = i
+print(d)    

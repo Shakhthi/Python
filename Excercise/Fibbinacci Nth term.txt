@@ -1,0 +1,10 @@
+n = int(input(" Enter the Nth term "))
+if n <= 0:
+    print(" Incorrect Input ")
+else:
+    a,b = 0,1
+    l = [a,b]
+    for _ in range(n-1):
+        a,b = b,b+a
+        l.append(b)
+    print(l[n], end=" ")

@@ -1,0 +1,8 @@
+#A4Q3
+
+i = input()
+List = i.split(" ")
+ 
+new_List = list(map(lambda x: int(x)**2, List))
+
+print(new_List)

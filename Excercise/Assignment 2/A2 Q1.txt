@@ -1,0 +1,18 @@
+#Q1 Sorting a List of tuple elements by it's second value
+
+List = [(2,5),(1,2),(4,4),(2,3),(2,1)]
+
+#List = [("Mathan",24),('Prakash',28),("Naveen",23),("loga",23),("kumar",36),('Mano',22)]
+
+print(" Given List:",List)
+
+for i in range(0,len(List)):
+    for j in range(0,len(List)-1):
+        
+        if(List[j][1] > List[j+1][1]):
+            
+            max_Element = List[j]
+            List[j] = List[j+1]
+            List[j+1] = max_Element
+                 
+print(" Sorted List: ", List)            

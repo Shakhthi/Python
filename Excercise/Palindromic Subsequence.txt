@@ -1,0 +1,14 @@
+def palindromic_Subsequence(string):
+        count = 0
+        
+        l = (string[x:y] for x in range(len(string)) for y in range(x+1,len(string)+1)) 
+
+        y = lambda x : x == x[::-1]  
+        
+        for i in l:
+            if y(i):
+                count+=1
+        return count 
+    
+c = palindromic_Subsequence(input(" Enter the String "))    
+print(c)

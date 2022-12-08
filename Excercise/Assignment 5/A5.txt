@@ -1,0 +1,12 @@
+#Finding the nth power of x
+class Power:
+    def __init__(self,x,n):
+        self.x = x
+        self.n = n
+    def find_x_power_n(self):
+        return x**n
+    
+x = int(input("Enter the x value: "))
+n = int(input("Enter the n value: "))
+Power_obj = Power(x,n)
+Power_obj.find_x_power_n()

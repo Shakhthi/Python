@@ -1,0 +1,12 @@
+#A3Q1 Game of Functions
+
+def sumofList(l):
+    Sum=0
+    for i in l:
+        Sum = Sum + i
+    print("Printing the Function Value:",Sum)
+    return Sum
+
+List = [8,3,0,7,2]
+S = sumofList(List)
+print("Printing the return value:",S)

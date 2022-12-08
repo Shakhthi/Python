@@ -1,0 +1,16 @@
+#A3Q3 Calculating the Upper and Lowercase
+
+def upperAndLower(s):
+    up,low = 0,0
+    for i in s:
+        if(i == ' '):
+            pass
+        elif(i.islower()):
+            low+=1
+        else:
+            up+=1
+    print(" Count of Uppercase: ",up)  
+    print(" Count of Lowercase: ",low)
+    
+string = input(" Enter the string ")
+upperAndLower(string)
