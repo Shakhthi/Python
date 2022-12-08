@@ -1,0 +1,16 @@
+#Q3 Dont go out on odd day
+items = int(input())
+numbers = []
+for i in range(items):
+    e = int(input())
+    numbers.append(e)   
+even = 0
+odd = 0
+for i in numbers:
+    if(i%2 == 0):
+        even = even+1
+    else: 
+        odd = odd+1
+print(" Count of Even Numbers:", even) 
+print(" Count of odd Numbers:", odd)
+

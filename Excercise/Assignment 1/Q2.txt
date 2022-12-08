@@ -1,0 +1,3 @@
+#Q2 Sending a word to the Mirror Dimension
+i = input()
+print(i[::-1])
